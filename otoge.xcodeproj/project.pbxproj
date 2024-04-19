@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A67CD0C22BD28430009E4C8E /* otogeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0C12BD28430009E4C8E /* otogeApp.swift */; };
+		A67CD0C42BD28430009E4C8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0C32BD28430009E4C8E /* ContentView.swift */; };
+		A67CD0C62BD28432009E4C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67CD0C52BD28432009E4C8E /* Assets.xcassets */; };
+		A67CD0CA2BD28432009E4C8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67CD0C92BD28432009E4C8E /* Preview Assets.xcassets */; };
+		A67CD0D42BD28432009E4C8E /* otogeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0D32BD28432009E4C8E /* otogeTests.swift */; };
+		A67CD0DE2BD28432009E4C8E /* otogeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0DD2BD28432009E4C8E /* otogeUITests.swift */; };
+		A67CD0E02BD28432009E4C8E /* otogeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0DF2BD28432009E4C8E /* otogeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A67CD0D02BD28432009E4C8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67CD0B62BD28430009E4C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67CD0BD2BD28430009E4C8E;
+			remoteInfo = otoge;
+		};
+		A67CD0DA2BD28432009E4C8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67CD0B62BD28430009E4C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67CD0BD2BD28430009E4C8E;
+			remoteInfo = otoge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A67CD0BE2BD28430009E4C8E /* otoge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otoge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67CD0C12BD28430009E4C8E /* otogeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeApp.swift; sourceTree = "<group>"; };
+		A67CD0C32BD28430009E4C8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A67CD0C52BD28432009E4C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A67CD0C72BD28432009E4C8E /* otoge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otoge.entitlements; sourceTree = "<group>"; };
+		A67CD0C92BD28432009E4C8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A67CD0CF2BD28432009E4C8E /* otogeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otogeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67CD0D32BD28432009E4C8E /* otogeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeTests.swift; sourceTree = "<group>"; };
+		A67CD0D92BD28432009E4C8E /* otogeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otogeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67CD0DD2BD28432009E4C8E /* otogeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeUITests.swift; sourceTree = "<group>"; };
+		A67CD0DF2BD28432009E4C8E /* otogeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A67CD0BB2BD28430009E4C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CD0CC2BD28432009E4C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CD0D62BD28432009E4C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A67CD0B52BD28430009E4C8E = {
+			isa = PBXGroup;
+			children = (
+				A67CD0C02BD28430009E4C8E /* otoge */,
+				A67CD0D22BD28432009E4C8E /* otogeTests */,
+				A67CD0DC2BD28432009E4C8E /* otogeUITests */,
+				A67CD0BF2BD28430009E4C8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A67CD0BF2BD28430009E4C8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0BE2BD28430009E4C8E /* otoge.app */,
+				A67CD0CF2BD28432009E4C8E /* otogeTests.xctest */,
+				A67CD0D92BD28432009E4C8E /* otogeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A67CD0C02BD28430009E4C8E /* otoge */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0C12BD28430009E4C8E /* otogeApp.swift */,
+				A67CD0C32BD28430009E4C8E /* ContentView.swift */,
+				A67CD0C52BD28432009E4C8E /* Assets.xcassets */,
+				A67CD0C72BD28432009E4C8E /* otoge.entitlements */,
+				A67CD0C82BD28432009E4C8E /* Preview Content */,
+			);
+			path = otoge;
+			sourceTree = "<group>";
+		};
+		A67CD0C82BD28432009E4C8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0C92BD28432009E4C8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A67CD0D22BD28432009E4C8E /* otogeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0D32BD28432009E4C8E /* otogeTests.swift */,
+			);
+			path = otogeTests;
+			sourceTree = "<group>";
+		};
+		A67CD0DC2BD28432009E4C8E /* otogeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0DD2BD28432009E4C8E /* otogeUITests.swift */,
+				A67CD0DF2BD28432009E4C8E /* otogeUITestsLaunchTests.swift */,
+			);
+			path = otogeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A67CD0BD2BD28430009E4C8E /* otoge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67CD0E32BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otoge" */;
+			buildPhases = (
+				A67CD0BA2BD28430009E4C8E /* Sources */,
+				A67CD0BB2BD28430009E4C8E /* Frameworks */,
+				A67CD0BC2BD28430009E4C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = otoge;
+			productName = otoge;
+			productReference = A67CD0BE2BD28430009E4C8E /* otoge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A67CD0CE2BD28432009E4C8E /* otogeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67CD0E62BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeTests" */;
+			buildPhases = (
+				A67CD0CB2BD28432009E4C8E /* Sources */,
+				A67CD0CC2BD28432009E4C8E /* Frameworks */,
+				A67CD0CD2BD28432009E4C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A67CD0D12BD28432009E4C8E /* PBXTargetDependency */,
+			);
+			name = otogeTests;
+			productName = otogeTests;
+			productReference = A67CD0CF2BD28432009E4C8E /* otogeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A67CD0D82BD28432009E4C8E /* otogeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67CD0E92BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeUITests" */;
+			buildPhases = (
+				A67CD0D52BD28432009E4C8E /* Sources */,
+				A67CD0D62BD28432009E4C8E /* Frameworks */,
+				A67CD0D72BD28432009E4C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A67CD0DB2BD28432009E4C8E /* PBXTargetDependency */,
+			);
+			name = otogeUITests;
+			productName = otogeUITests;
+			productReference = A67CD0D92BD28432009E4C8E /* otogeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A67CD0B62BD28430009E4C8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A67CD0BD2BD28430009E4C8E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A67CD0CE2BD28432009E4C8E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A67CD0BD2BD28430009E4C8E;
+					};
+					A67CD0D82BD28432009E4C8E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A67CD0BD2BD28430009E4C8E;
+					};
+				};
+			};
+			buildConfigurationList = A67CD0B92BD28430009E4C8E /* Build configuration list for PBXProject "otoge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A67CD0B52BD28430009E4C8E;
+			productRefGroup = A67CD0BF2BD28430009E4C8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A67CD0BD2BD28430009E4C8E /* otoge */,
+				A67CD0CE2BD28432009E4C8E /* otogeTests */,
+				A67CD0D82BD28432009E4C8E /* otogeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A67CD0BC2BD28430009E4C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67CD0CA2BD28432009E4C8E /* Preview Assets.xcassets in Resources */,
+				A67CD0C62BD28432009E4C8E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CD0CD2BD28432009E4C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CD0D72BD28432009E4C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A67CD0BA2BD28430009E4C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67CD0C42BD28430009E4C8E /* ContentView.swift in Sources */,
+				A67CD0C22BD28430009E4C8E /* otogeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CD0CB2BD28432009E4C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67CD0D42BD28432009E4C8E /* otogeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67CD0D52BD28432009E4C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67CD0DE2BD28432009E4C8E /* otogeUITests.swift in Sources */,
+				A67CD0E02BD28432009E4C8E /* otogeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A67CD0D12BD28432009E4C8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67CD0BD2BD28430009E4C8E /* otoge */;
+			targetProxy = A67CD0D02BD28432009E4C8E /* PBXContainerItemProxy */;
+		};
+		A67CD0DB2BD28432009E4C8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67CD0BD2BD28430009E4C8E /* otoge */;
+			targetProxy = A67CD0DA2BD28432009E4C8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A67CD0E12BD28432009E4C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A67CD0E22BD28432009E4C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A67CD0E42BD28432009E4C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = otoge/otoge.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"otoge/Preview Content\"";
+				DEVELOPMENT_TEAM = 8SE6CHAH5M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senacand.otoge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A67CD0E52BD28432009E4C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = otoge/otoge.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"otoge/Preview Content\"";
+				DEVELOPMENT_TEAM = 8SE6CHAH5M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senacand.otoge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A67CD0E72BD28432009E4C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8SE6CHAH5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senacand.otogeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/otoge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/otoge";
+			};
+			name = Debug;
+		};
+		A67CD0E82BD28432009E4C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8SE6CHAH5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senacand.otogeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/otoge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/otoge";
+			};
+			name = Release;
+		};
+		A67CD0EA2BD28432009E4C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8SE6CHAH5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senacand.otogeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = otoge;
+			};
+			name = Debug;
+		};
+		A67CD0EB2BD28432009E4C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8SE6CHAH5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senacand.otogeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = otoge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A67CD0B92BD28430009E4C8E /* Build configuration list for PBXProject "otoge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67CD0E12BD28432009E4C8E /* Debug */,
+				A67CD0E22BD28432009E4C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A67CD0E32BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otoge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67CD0E42BD28432009E4C8E /* Debug */,
+				A67CD0E52BD28432009E4C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A67CD0E62BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67CD0E72BD28432009E4C8E /* Debug */,
+				A67CD0E82BD28432009E4C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A67CD0E92BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67CD0EA2BD28432009E4C8E /* Debug */,
+				A67CD0EB2BD28432009E4C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A67CD0B62BD28430009E4C8E /* Project object */;
+}
