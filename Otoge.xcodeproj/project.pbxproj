@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A67CD0C22BD28430009E4C8E /* otogeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0C12BD28430009E4C8E /* otogeApp.swift */; };
-		A67CD0C42BD28430009E4C8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0C32BD28430009E4C8E /* ContentView.swift */; };
+		A62E8F132BD288DA00B9DCE1 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F122BD288DA00B9DCE1 /* MainApp.swift */; };
+		A62E8F172BD290AD00B9DCE1 /* Arcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F162BD290AD00B9DCE1 /* Arcade.swift */; };
+		A62E8F192BD290CA00B9DCE1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F182BD290CA00B9DCE1 /* Location.swift */; };
+		A62E8F1B2BD291CE00B9DCE1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F1A2BD291CE00B9DCE1 /* Game.swift */; };
+		A62E8F1E2BD2934100B9DCE1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A62E8F1D2BD2934100B9DCE1 /* Alamofire */; };
+		A62E8F202BD2935900B9DCE1 /* ArcadeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */; };
+		A62E8F232BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */; };
+		A62E8F262BD296B300B9DCE1 /* OtogeArcade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F252BD296B300B9DCE1 /* OtogeArcade.swift */; };
+		A62E8F282BD2975600B9DCE1 /* OtogeCabinet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F272BD2975600B9DCE1 /* OtogeCabinet.swift */; };
+		A62E8F2A2BD2978C00B9DCE1 /* ArcadeBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E8F292BD2978C00B9DCE1 /* ArcadeBrand.swift */; };
 		A67CD0C62BD28432009E4C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67CD0C52BD28432009E4C8E /* Assets.xcassets */; };
 		A67CD0CA2BD28432009E4C8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67CD0C92BD28432009E4C8E /* Preview Assets.xcassets */; };
-		A67CD0D42BD28432009E4C8E /* otogeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0D32BD28432009E4C8E /* otogeTests.swift */; };
-		A67CD0DE2BD28432009E4C8E /* otogeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0DD2BD28432009E4C8E /* otogeUITests.swift */; };
-		A67CD0E02BD28432009E4C8E /* otogeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0DF2BD28432009E4C8E /* otogeUITestsLaunchTests.swift */; };
+		A67CD0D42BD28432009E4C8E /* OtogeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0D32BD28432009E4C8E /* OtogeTests.swift */; };
+		A67CD0DE2BD28432009E4C8E /* OtogeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0DD2BD28432009E4C8E /* OtogeUITests.swift */; };
+		A67CD0E02BD28432009E4C8E /* OtogeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0DF2BD28432009E4C8E /* OtogeUITestsLaunchTests.swift */; };
+		A67CD0EE2BD2855D009E4C8E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A67CD0ED2BD2855D009E4C8E /* ComposableArchitecture */; };
+		A67CD0F22BD28611009E4C8E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0F12BD28611009E4C8E /* HomeScreen.swift */; };
+		A67CD0F42BD28618009E4C8E /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0F32BD28618009E4C8E /* HomeFeature.swift */; };
+		A6A5BB192BD2B59A002B6970 /* ArcadeDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB182BD2B59A002B6970 /* ArcadeDetailFeature.swift */; };
+		A6A5BB1D2BD2B68B002B6970 /* ArcadeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB1C2BD2B68B002B6970 /* ArcadeDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +47,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A67CD0BE2BD28430009E4C8E /* otoge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otoge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A67CD0C12BD28430009E4C8E /* otogeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeApp.swift; sourceTree = "<group>"; };
-		A67CD0C32BD28430009E4C8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A62E8F122BD288DA00B9DCE1 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainApp.swift; path = Otoge/MainApp.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F162BD290AD00B9DCE1 /* Arcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Arcade.swift; path = Otoge/Entities/Arcade.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F182BD290CA00B9DCE1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Otoge/Entities/Location.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F1A2BD291CE00B9DCE1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Otoge/Entities/Game.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeRepository.swift; path = otoge/Repositories/Arcade/ArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeAppArcadeRepository.swift; path = Otoge/Repositories/Arcade/OtogeAppArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F252BD296B300B9DCE1 /* OtogeArcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeArcade.swift; path = Otoge/Repositories/Arcade/Models/OtogeArcade.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F272BD2975600B9DCE1 /* OtogeCabinet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeCabinet.swift; path = Otoge/Repositories/Arcade/Models/OtogeCabinet.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F292BD2978C00B9DCE1 /* ArcadeBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeBrand.swift; path = Otoge/Entities/ArcadeBrand.swift; sourceTree = SOURCE_ROOT; };
+		A67CD0BE2BD28430009E4C8E /* Otoge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otoge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67CD0C52BD28432009E4C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A67CD0C72BD28432009E4C8E /* otoge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = otoge.entitlements; sourceTree = "<group>"; };
 		A67CD0C92BD28432009E4C8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A67CD0CF2BD28432009E4C8E /* otogeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otogeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A67CD0D32BD28432009E4C8E /* otogeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeTests.swift; sourceTree = "<group>"; };
-		A67CD0D92BD28432009E4C8E /* otogeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otogeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A67CD0DD2BD28432009E4C8E /* otogeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeUITests.swift; sourceTree = "<group>"; };
-		A67CD0DF2BD28432009E4C8E /* otogeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otogeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A67CD0CF2BD28432009E4C8E /* OtogeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtogeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67CD0D32BD28432009E4C8E /* OtogeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtogeTests.swift; sourceTree = "<group>"; };
+		A67CD0D92BD28432009E4C8E /* OtogeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtogeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67CD0DD2BD28432009E4C8E /* OtogeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtogeUITests.swift; sourceTree = "<group>"; };
+		A67CD0DF2BD28432009E4C8E /* OtogeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtogeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A67CD0F12BD28611009E4C8E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		A67CD0F32BD28618009E4C8E /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
+		A6A5BB182BD2B59A002B6970 /* ArcadeDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeDetailFeature.swift; path = Otoge/Features/ArcadeDetail/ArcadeDetailFeature.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB1C2BD2B68B002B6970 /* ArcadeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeDetailScreen.swift; path = Otoge/Features/ArcadeDetail/ArcadeDetailScreen.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67CD0EE2BD2855D009E4C8E /* ComposableArchitecture in Frameworks */,
+				A62E8F1E2BD2934100B9DCE1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +98,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A62E8F142BD2908700B9DCE1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A62E8F212BD293B800B9DCE1 /* Arcade */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A62E8F152BD2908E00B9DCE1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A62E8F162BD290AD00B9DCE1 /* Arcade.swift */,
+				A62E8F182BD290CA00B9DCE1 /* Location.swift */,
+				A62E8F1A2BD291CE00B9DCE1 /* Game.swift */,
+				A62E8F292BD2978C00B9DCE1 /* ArcadeBrand.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A62E8F212BD293B800B9DCE1 /* Arcade */ = {
+			isa = PBXGroup;
+			children = (
+				A62E8F242BD2961300B9DCE1 /* Models */,
+				A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */,
+				A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */,
+			);
+			path = Arcade;
+			sourceTree = "<group>";
+		};
+		A62E8F242BD2961300B9DCE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A62E8F252BD296B300B9DCE1 /* OtogeArcade.swift */,
+				A62E8F272BD2975600B9DCE1 /* OtogeCabinet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A67CD0B52BD28430009E4C8E = {
 			isa = PBXGroup;
 			children = (
 				A67CD0C02BD28430009E4C8E /* otoge */,
-				A67CD0D22BD28432009E4C8E /* otogeTests */,
-				A67CD0DC2BD28432009E4C8E /* otogeUITests */,
+				A67CD0D22BD28432009E4C8E /* OtogeTests */,
+				A67CD0DC2BD28432009E4C8E /* OtogeUITests */,
 				A67CD0BF2BD28430009E4C8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +149,9 @@
 		A67CD0BF2BD28430009E4C8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A67CD0BE2BD28430009E4C8E /* otoge.app */,
-				A67CD0CF2BD28432009E4C8E /* otogeTests.xctest */,
-				A67CD0D92BD28432009E4C8E /* otogeUITests.xctest */,
+				A67CD0BE2BD28430009E4C8E /* Otoge.app */,
+				A67CD0CF2BD28432009E4C8E /* OtogeTests.xctest */,
+				A67CD0D92BD28432009E4C8E /* OtogeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,11 +159,13 @@
 		A67CD0C02BD28430009E4C8E /* otoge */ = {
 			isa = PBXGroup;
 			children = (
-				A67CD0C12BD28430009E4C8E /* otogeApp.swift */,
-				A67CD0C32BD28430009E4C8E /* ContentView.swift */,
+				A62E8F152BD2908E00B9DCE1 /* Entities */,
+				A62E8F142BD2908700B9DCE1 /* Repositories */,
+				A67CD0EF2BD285FA009E4C8E /* Features */,
 				A67CD0C52BD28432009E4C8E /* Assets.xcassets */,
 				A67CD0C72BD28432009E4C8E /* otoge.entitlements */,
 				A67CD0C82BD28432009E4C8E /* Preview Content */,
+				A62E8F122BD288DA00B9DCE1 /* MainApp.swift */,
 			);
 			path = otoge;
 			sourceTree = "<group>";
@@ -112,29 +178,56 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A67CD0D22BD28432009E4C8E /* otogeTests */ = {
+		A67CD0D22BD28432009E4C8E /* OtogeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A67CD0D32BD28432009E4C8E /* otogeTests.swift */,
+				A67CD0D32BD28432009E4C8E /* OtogeTests.swift */,
 			);
-			path = otogeTests;
+			path = OtogeTests;
 			sourceTree = "<group>";
 		};
-		A67CD0DC2BD28432009E4C8E /* otogeUITests */ = {
+		A67CD0DC2BD28432009E4C8E /* OtogeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A67CD0DD2BD28432009E4C8E /* otogeUITests.swift */,
-				A67CD0DF2BD28432009E4C8E /* otogeUITestsLaunchTests.swift */,
+				A67CD0DD2BD28432009E4C8E /* OtogeUITests.swift */,
+				A67CD0DF2BD28432009E4C8E /* OtogeUITestsLaunchTests.swift */,
 			);
-			path = otogeUITests;
+			path = OtogeUITests;
+			sourceTree = "<group>";
+		};
+		A67CD0EF2BD285FA009E4C8E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A6A5BB172BD2B590002B6970 /* ArcadeDetail */,
+				A67CD0F02BD28600009E4C8E /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A67CD0F02BD28600009E4C8E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0F12BD28611009E4C8E /* HomeScreen.swift */,
+				A67CD0F32BD28618009E4C8E /* HomeFeature.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A6A5BB172BD2B590002B6970 /* ArcadeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A6A5BB182BD2B59A002B6970 /* ArcadeDetailFeature.swift */,
+				A6A5BB1C2BD2B68B002B6970 /* ArcadeDetailScreen.swift */,
+			);
+			path = ArcadeDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A67CD0BD2BD28430009E4C8E /* otoge */ = {
+		A67CD0BD2BD28430009E4C8E /* Otoge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A67CD0E32BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otoge" */;
+			buildConfigurationList = A67CD0E32BD28432009E4C8E /* Build configuration list for PBXNativeTarget "Otoge" */;
 			buildPhases = (
 				A67CD0BA2BD28430009E4C8E /* Sources */,
 				A67CD0BB2BD28430009E4C8E /* Frameworks */,
@@ -144,14 +237,18 @@
 			);
 			dependencies = (
 			);
-			name = otoge;
+			name = Otoge;
+			packageProductDependencies = (
+				A67CD0ED2BD2855D009E4C8E /* ComposableArchitecture */,
+				A62E8F1D2BD2934100B9DCE1 /* Alamofire */,
+			);
 			productName = otoge;
-			productReference = A67CD0BE2BD28430009E4C8E /* otoge.app */;
+			productReference = A67CD0BE2BD28430009E4C8E /* Otoge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A67CD0CE2BD28432009E4C8E /* otogeTests */ = {
+		A67CD0CE2BD28432009E4C8E /* OtogeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A67CD0E62BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeTests" */;
+			buildConfigurationList = A67CD0E62BD28432009E4C8E /* Build configuration list for PBXNativeTarget "OtogeTests" */;
 			buildPhases = (
 				A67CD0CB2BD28432009E4C8E /* Sources */,
 				A67CD0CC2BD28432009E4C8E /* Frameworks */,
@@ -162,14 +259,14 @@
 			dependencies = (
 				A67CD0D12BD28432009E4C8E /* PBXTargetDependency */,
 			);
-			name = otogeTests;
+			name = OtogeTests;
 			productName = otogeTests;
-			productReference = A67CD0CF2BD28432009E4C8E /* otogeTests.xctest */;
+			productReference = A67CD0CF2BD28432009E4C8E /* OtogeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A67CD0D82BD28432009E4C8E /* otogeUITests */ = {
+		A67CD0D82BD28432009E4C8E /* OtogeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A67CD0E92BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeUITests" */;
+			buildConfigurationList = A67CD0E92BD28432009E4C8E /* Build configuration list for PBXNativeTarget "OtogeUITests" */;
 			buildPhases = (
 				A67CD0D52BD28432009E4C8E /* Sources */,
 				A67CD0D62BD28432009E4C8E /* Frameworks */,
@@ -180,9 +277,9 @@
 			dependencies = (
 				A67CD0DB2BD28432009E4C8E /* PBXTargetDependency */,
 			);
-			name = otogeUITests;
+			name = OtogeUITests;
 			productName = otogeUITests;
-			productReference = A67CD0D92BD28432009E4C8E /* otogeUITests.xctest */;
+			productReference = A67CD0D92BD28432009E4C8E /* OtogeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A67CD0B92BD28430009E4C8E /* Build configuration list for PBXProject "otoge" */;
+			buildConfigurationList = A67CD0B92BD28430009E4C8E /* Build configuration list for PBXProject "Otoge" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,13 +314,17 @@
 				Base,
 			);
 			mainGroup = A67CD0B52BD28430009E4C8E;
+			packageReferences = (
+				A67CD0EC2BD2855D009E4C8E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				A62E8F1C2BD2934000B9DCE1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A67CD0BF2BD28430009E4C8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A67CD0BD2BD28430009E4C8E /* otoge */,
-				A67CD0CE2BD28432009E4C8E /* otogeTests */,
-				A67CD0D82BD28432009E4C8E /* otogeUITests */,
+				A67CD0BD2BD28430009E4C8E /* Otoge */,
+				A67CD0CE2BD28432009E4C8E /* OtogeTests */,
+				A67CD0D82BD28432009E4C8E /* OtogeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,8 +360,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A67CD0C42BD28430009E4C8E /* ContentView.swift in Sources */,
-				A67CD0C22BD28430009E4C8E /* otogeApp.swift in Sources */,
+				A62E8F232BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift in Sources */,
+				A62E8F132BD288DA00B9DCE1 /* MainApp.swift in Sources */,
+				A62E8F2A2BD2978C00B9DCE1 /* ArcadeBrand.swift in Sources */,
+				A6A5BB1D2BD2B68B002B6970 /* ArcadeDetailScreen.swift in Sources */,
+				A62E8F1B2BD291CE00B9DCE1 /* Game.swift in Sources */,
+				A62E8F262BD296B300B9DCE1 /* OtogeArcade.swift in Sources */,
+				A67CD0F22BD28611009E4C8E /* HomeScreen.swift in Sources */,
+				A62E8F192BD290CA00B9DCE1 /* Location.swift in Sources */,
+				A6A5BB192BD2B59A002B6970 /* ArcadeDetailFeature.swift in Sources */,
+				A62E8F202BD2935900B9DCE1 /* ArcadeRepository.swift in Sources */,
+				A67CD0F42BD28618009E4C8E /* HomeFeature.swift in Sources */,
+				A62E8F172BD290AD00B9DCE1 /* Arcade.swift in Sources */,
+				A62E8F282BD2975600B9DCE1 /* OtogeCabinet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A67CD0D42BD28432009E4C8E /* otogeTests.swift in Sources */,
+				A67CD0D42BD28432009E4C8E /* OtogeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +388,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A67CD0DE2BD28432009E4C8E /* otogeUITests.swift in Sources */,
-				A67CD0E02BD28432009E4C8E /* otogeUITestsLaunchTests.swift in Sources */,
+				A67CD0DE2BD28432009E4C8E /* OtogeUITests.swift in Sources */,
+				A67CD0E02BD28432009E4C8E /* OtogeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +398,12 @@
 /* Begin PBXTargetDependency section */
 		A67CD0D12BD28432009E4C8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A67CD0BD2BD28430009E4C8E /* otoge */;
+			target = A67CD0BD2BD28430009E4C8E /* Otoge */;
 			targetProxy = A67CD0D02BD28432009E4C8E /* PBXContainerItemProxy */;
 		};
 		A67CD0DB2BD28432009E4C8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A67CD0BD2BD28430009E4C8E /* otoge */;
+			target = A67CD0BD2BD28430009E4C8E /* Otoge */;
 			targetProxy = A67CD0DA2BD28432009E4C8E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -417,6 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = otoge/otoge.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"otoge/Preview Content\"";
@@ -424,6 +537,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Otoge;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -432,9 +547,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -455,6 +570,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = otoge/otoge.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"otoge/Preview Content\"";
@@ -462,6 +578,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Otoge;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -470,9 +588,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -506,7 +624,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/otoge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/otoge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otoge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Otoge";
 			};
 			name = Debug;
 		};
@@ -529,7 +647,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/otoge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/otoge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otoge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Otoge";
 			};
 			name = Release;
 		};
@@ -580,7 +698,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A67CD0B92BD28430009E4C8E /* Build configuration list for PBXProject "otoge" */ = {
+		A67CD0B92BD28430009E4C8E /* Build configuration list for PBXProject "Otoge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A67CD0E12BD28432009E4C8E /* Debug */,
@@ -589,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A67CD0E32BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otoge" */ = {
+		A67CD0E32BD28432009E4C8E /* Build configuration list for PBXNativeTarget "Otoge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A67CD0E42BD28432009E4C8E /* Debug */,
@@ -598,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A67CD0E62BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeTests" */ = {
+		A67CD0E62BD28432009E4C8E /* Build configuration list for PBXNativeTarget "OtogeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A67CD0E72BD28432009E4C8E /* Debug */,
@@ -607,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A67CD0E92BD28432009E4C8E /* Build configuration list for PBXNativeTarget "otogeUITests" */ = {
+		A67CD0E92BD28432009E4C8E /* Build configuration list for PBXNativeTarget "OtogeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A67CD0EA2BD28432009E4C8E /* Debug */,
@@ -617,6 +735,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A62E8F1C2BD2934000B9DCE1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		A67CD0EC2BD2855D009E4C8E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A62E8F1D2BD2934100B9DCE1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A62E8F1C2BD2934000B9DCE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A67CD0ED2BD2855D009E4C8E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A67CD0EC2BD2855D009E4C8E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A67CD0B62BD28430009E4C8E /* Project object */;
 }
