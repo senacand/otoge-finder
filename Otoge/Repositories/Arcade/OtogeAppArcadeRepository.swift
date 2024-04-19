@@ -52,9 +52,14 @@ private extension Arcade {
                 address: arcade.address,
                 alternateAddress: arcade.alternateAddress
             ),
-            games: arcade.cabinets.map {
-                Game(cabinet: $0)
-            },
+            games: 
+                Array(
+                    Set(
+                        arcade.cabinets.map {
+                            Game(cabinet: $0)
+                        }
+                    )
+                ),
             brand: ArcadeBrand.from(brand: arcade.brand)
         )
     }

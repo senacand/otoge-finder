@@ -27,6 +27,7 @@
 		A67CD0F42BD28618009E4C8E /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67CD0F32BD28618009E4C8E /* HomeFeature.swift */; };
 		A6A5BB192BD2B59A002B6970 /* ArcadeDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB182BD2B59A002B6970 /* ArcadeDetailFeature.swift */; };
 		A6A5BB1D2BD2B68B002B6970 /* ArcadeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB1C2BD2B68B002B6970 /* ArcadeDetailScreen.swift */; };
+		A6A5BB202BD2CC09002B6970 /* ArcadeGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB1F2BD2CC09002B6970 /* ArcadeGameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A67CD0F32BD28618009E4C8E /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
 		A6A5BB182BD2B59A002B6970 /* ArcadeDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeDetailFeature.swift; path = Otoge/Features/ArcadeDetail/ArcadeDetailFeature.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB1C2BD2B68B002B6970 /* ArcadeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeDetailScreen.swift; path = Otoge/Features/ArcadeDetail/ArcadeDetailScreen.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB1F2BD2CC09002B6970 /* ArcadeGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeGameCell.swift; path = Otoge/Features/ArcadeDetail/Views/ArcadeGameCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,10 +218,19 @@
 		A6A5BB172BD2B590002B6970 /* ArcadeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A6A5BB1E2BD2CBF9002B6970 /* Views */,
 				A6A5BB182BD2B59A002B6970 /* ArcadeDetailFeature.swift */,
 				A6A5BB1C2BD2B68B002B6970 /* ArcadeDetailScreen.swift */,
 			);
 			path = ArcadeDetail;
+			sourceTree = "<group>";
+		};
+		A6A5BB1E2BD2CBF9002B6970 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6A5BB1F2BD2CC09002B6970 /* ArcadeGameCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A62E8F232BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift in Sources */,
+				A6A5BB202BD2CC09002B6970 /* ArcadeGameCell.swift in Sources */,
 				A62E8F132BD288DA00B9DCE1 /* MainApp.swift in Sources */,
 				A62E8F2A2BD2978C00B9DCE1 /* ArcadeBrand.swift in Sources */,
 				A6A5BB1D2BD2B68B002B6970 /* ArcadeDetailScreen.swift in Sources */,

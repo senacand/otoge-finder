@@ -7,7 +7,7 @@
 
 struct Arcade: Equatable {
     var name: String
-    var alternateName: String
+    var alternateName: String?
     var location: Location
     var games: [Game]
     var brand: ArcadeBrand?

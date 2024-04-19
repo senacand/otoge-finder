@@ -9,7 +9,7 @@ import Foundation
 
 struct OtogeArcade: Codable {
     var country, area, storeName, address: String
-    var alternateArea, alternateStoreName, alternateAddress: String
+    var alternateArea, alternateStoreName, alternateAddress: String?
     var lat, lng: Double
     var access, openingHours: String?
     var cabinets: [OtogeCabinet]

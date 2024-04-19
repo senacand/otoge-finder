@@ -14,11 +14,18 @@ struct ArcadeDetailFeature {
         let arcade: Arcade
     }
     
-    enum Action {}
+    enum Action {
+        case dismiss
+    }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
-            .none
+            switch action {
+            case .dismiss:
+                break
+            }
+            
+            return .none
         }
     }
 }

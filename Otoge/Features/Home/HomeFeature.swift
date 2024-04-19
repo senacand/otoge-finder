@@ -27,7 +27,7 @@ struct HomeFeature {
             )
         
         var mapCenter = MapCenter(.init())
-        var selectedMapItem: MKMapItem?
+        var selectedArcade: Arcade?
         var arcades: [Arcade] = []
         var isLoading = false
         
@@ -51,11 +51,10 @@ struct HomeFeature {
     enum Action {
         case searchTapped
         case arcadeListUpdated(arcades: [Arcade])
-        case arcadeSelected(arcade: Arcade)
+        case arcadeSelected(arcade: Arcade?)
         case arcadeDetailAction(PresentationAction<ArcadeDetailFeature.Action>)
         case mapCameraPositionChanged(MapCameraPosition)
         case mapRegionChanged(MKCoordinateRegion)
-        case mapItemSelected(MKMapItem)
     }
     
     let repository: ArcadeRepositoryProtocol = OtogeAppArcadeRepository()
@@ -68,11 +67,6 @@ struct HomeFeature {
                 
             case .mapRegionChanged(let region):
                 state.mapCenter = MapCenter(region)
-                
-            case .mapItemSelected(let item):
-                if let arcade = state.arcades.first { $0.hashValue == item.hash } {
-                    state.arcadeDetailState = .init(arcade: arcade)
-                }
                 
             case .searchTapped:
                 state.isLoading = true
@@ -90,7 +84,17 @@ struct HomeFeature {
                 state.isLoading = false
                 
             case .arcadeSelected(let arcade):
-                state.arcadeDetailState = .init(arcade: arcade)
+                state.selectedArcade = arcade
+                if let arcade {
+                    state.arcadeDetailState = .init(arcade: arcade)
+                }
+                else {
+                    state.arcadeDetailState = nil
+                }
+                
+            case .arcadeDetailAction(.presented(.dismiss)):
+                state.arcadeDetailState = nil
+                state.selectedArcade = nil
                 
             case .arcadeDetailAction:
                 break

@@ -9,5 +9,5 @@ struct Location: Equatable {
     var latitude: Double
     var longitude: Double
     var address: String
-    var alternateAddress: String
+    var alternateAddress: String?
 }

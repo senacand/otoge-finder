@@ -16,11 +16,14 @@ struct HomeScreen: View {
         Map(
             position: $store
                 .mapCameraPosition
-                .sending(\.mapCameraPositionChanged)
+                .sending(\.mapCameraPositionChanged),
+            selection: $store
+                .selectedArcade
+                .sending(\.arcadeSelected)
         ) {
             ForEach(store.arcades, id: \.self) { arcade in
                 Marker(
-                    arcade.alternateName,
+                    arcade.name,
                     systemImage: "gamecontroller.fill",
                     coordinate:
                         CLLocationCoordinate2D(
@@ -28,6 +31,7 @@ struct HomeScreen: View {
                             longitude: arcade.location.longitude
                         )
                 )
+                .tag(arcade)
             }
         }
         .mapStyle(.standard(elevation: .realistic))
@@ -59,9 +63,15 @@ struct HomeScreen: View {
                 $store.scope(
                     state: \.arcadeDetailState,
                     action: \.arcadeDetailAction
-                )
+                ),
+            onDismiss: {
+                store.send(.arcadeSelected(arcade: nil))
+            }
         ) { arcadeDetailStore in
             ArcadeDetailScreen(store: arcadeDetailStore)
+                .presentationDetents([.height(350), .fraction(0.99)])
+                .presentationDragIndicator(.automatic)
+                .presentationBackgroundInteraction(.enabled)
         }
     }
 }

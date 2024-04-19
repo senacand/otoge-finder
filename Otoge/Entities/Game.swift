@@ -56,3 +56,9 @@ extension Game {
         }
     }
 }
+
+extension Game: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+}
