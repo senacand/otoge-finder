@@ -14,6 +14,7 @@ import SwiftUI
 @Reducer
 struct HomeFeature {
     @Dependency(\.appLocationManager) var locationManager
+    @Dependency(\.appArcadeRepository) var repository
     
     @ObservableState
     struct State: Equatable {
@@ -92,8 +93,6 @@ struct HomeFeature {
         case searchAction(PresentationAction<SearchFeature.Action>)
         case searchResultAction(PresentationAction<SearchResultFeature.Action>)
     }
-    
-    let repository: ArcadeRepositoryProtocol = OtogeAppArcadeRepository()
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in

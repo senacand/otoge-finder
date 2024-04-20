@@ -37,6 +37,8 @@
 		A6A5BB352BD3948E002B6970 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB342BD3948E002B6970 /* Dependencies.swift */; };
 		A6A5BB3A2BD3B997002B6970 /* ArcadeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */; };
 		A6A5BB3F2BD43877002B6970 /* Nabla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A5BB3E2BD43877002B6970 /* Nabla.ttf */; };
+		A6A5BB412BD445B2002B6970 /* jp_arcade_list.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A5BB402BD44596002B6970 /* jp_arcade_list.json */; };
+		A6A5BB432BD445FB002B6970 /* LocalArcadeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		A6A5BB342BD3948E002B6970 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dependencies.swift; path = Otoge/Dependencies.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeCell.swift; path = Otoge/Features/SearchResult/Views/ArcadeCell.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB3E2BD43877002B6970 /* Nabla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nabla.ttf; sourceTree = "<group>"; };
+		A6A5BB402BD44596002B6970 /* jp_arcade_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = jp_arcade_list.json; path = Otoge/Resources/jp_arcade_list.json; sourceTree = SOURCE_ROOT; };
+		A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalArcadeRepository.swift; path = Otoge/Repositories/Arcade/LocalArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				A62E8F242BD2961300B9DCE1 /* Models */,
 				A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */,
 				A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */,
+				A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */,
 			);
 			path = Arcade;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			children = (
 				A67CD0C52BD28432009E4C8E /* Assets.xcassets */,
 				A6A5BB3E2BD43877002B6970 /* Nabla.ttf */,
+				A6A5BB402BD44596002B6970 /* jp_arcade_list.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A5BB3F2BD43877002B6970 /* Nabla.ttf in Resources */,
+				A6A5BB412BD445B2002B6970 /* jp_arcade_list.json in Resources */,
 				A67CD0CA2BD28432009E4C8E /* Preview Assets.xcassets in Resources */,
 				A67CD0C62BD28432009E4C8E /* Assets.xcassets in Resources */,
 			);
@@ -455,6 +462,7 @@
 				A6A5BB272BD2F8C9002B6970 /* SearchFeature.swift in Sources */,
 				A62E8F192BD290CA00B9DCE1 /* Location.swift in Sources */,
 				A6A5BB192BD2B59A002B6970 /* ArcadeDetailFeature.swift in Sources */,
+				A6A5BB432BD445FB002B6970 /* LocalArcadeRepository.swift in Sources */,
 				A62E8F202BD2935900B9DCE1 /* ArcadeRepository.swift in Sources */,
 				A6A5BB332BD38E54002B6970 /* LocalSearchRepository.swift in Sources */,
 				A6A5BB302BD32C84002B6970 /* SearchResultFeature.swift in Sources */,

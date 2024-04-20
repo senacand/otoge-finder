@@ -31,8 +31,8 @@ final class OtogeAppArcadeRepository: ArcadeRepositoryProtocol {
     private func url(forPath path: String, parameters: [String: String?]) -> URL {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "otoge.app"
-        components.path = "/api/\(path)"
+        components.host = "production.otoge-app.djzmo.workers.dev"
+        components.path = "/\(path)"
         components.queryItems = parameters.map {
             URLQueryItem(name: $0, value: $1)
         }
@@ -41,7 +41,7 @@ final class OtogeAppArcadeRepository: ArcadeRepositoryProtocol {
     }
 }
 
-private extension Arcade {
+extension Arcade {
     init(arcade: OtogeArcade) {
         self.init(
             name: arcade.storeName,
