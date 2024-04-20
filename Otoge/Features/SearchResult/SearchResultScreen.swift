@@ -20,8 +20,19 @@ struct SearchResultScreen: View {
                     Button {
                         store.send(.arcadeTapped(arcade))
                     } label: {
-                        HStack(alignment: .top) {
-                            Image(systemName: "mappin.and.ellipse")
+                        HStack(alignment: .top, spacing: 16.0) {
+                            if let brandImageString = arcade.brand?.imageString {
+                                Image(uiImage: UIImage(named: brandImageString)!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 24, height: 24)
+                            }
+                            else {
+                                Image(systemName: "mappin.and.ellipse")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 24, height: 24)
+                            }
                             VStack(alignment: .leading) {
                                 Text(arcade.name)
                                 Text(arcade.location.address)

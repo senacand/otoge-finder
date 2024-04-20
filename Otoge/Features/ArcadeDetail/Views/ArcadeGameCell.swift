@@ -12,7 +12,19 @@ struct ArcadeGameCell: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "gamecontroller.fill")
+            if let imageString = game.imageString {
+                Image(uiImage: UIImage(named: imageString)!)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 32, height: 32)
+            }
+            else {
+                Image(systemName: "gamecontroller.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 32, height: 32)
+            }
+            
             Text(game.name)
             Spacer()
         }

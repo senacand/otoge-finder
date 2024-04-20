@@ -58,6 +58,21 @@ extension Game {
             return name
         }
     }
+    
+    var imageString: String? {
+        switch self {
+        case .maimaiDx:
+            "maimai"
+        case .chunithm:
+            "chunithm"
+        case .ongeki:
+            "ongeki"
+        case .projectDiva:
+            "project_diva"
+        default:
+            nil
+        }
+    }
 }
 
 extension Game: Hashable {

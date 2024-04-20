@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "maimai.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
