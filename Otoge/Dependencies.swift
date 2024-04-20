@@ -9,7 +9,7 @@ import ComposableArchitecture
 import ComposableCoreLocation
 
 private enum AppArcadeRepository: DependencyKey {
-    static let liveValue: ArcadeRepositoryProtocol = OtogeAppArcadeRepository()
+    static let liveValue: ArcadeRepositoryProtocol = LocalArcadeRepository()
 }
 
 private enum AppLocalSearchRepository: DependencyKey {

@@ -29,7 +29,7 @@ extension SearchResultScreen {
                     Text("Search")
                         .font(.title)
                         .fontWeight(.bold)
-                    Text("\(store.arcades.count) arcades found")
+                    Text("\(store.arcades.count) arcade(s) found")
                         .font(.subheadline)
                 }
                 Spacer()

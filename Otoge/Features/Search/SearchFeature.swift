@@ -79,11 +79,8 @@ struct SearchFeature {
                 return .run { send in
                     let result = await localSearchRepository
                         .searchLocationWithQuery(
-                            [
-                                completion.title,
-                                completion.subtitle
-                            ]
-                            .joined(separator: " ")
+                            completion.title,
+                            query2: completion.subtitle
                         )
                     
                     guard let mapItem = result.first else {
