@@ -33,6 +33,9 @@
 		A6A5BB2B2BD2F933002B6970 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB2A2BD2F933002B6970 /* SearchScreen.swift */; };
 		A6A5BB2E2BD32C7D002B6970 /* SearchResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB2D2BD32C7D002B6970 /* SearchResultScreen.swift */; };
 		A6A5BB302BD32C84002B6970 /* SearchResultFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB2F2BD32C84002B6970 /* SearchResultFeature.swift */; };
+		A6A5BB332BD38E54002B6970 /* LocalSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB322BD38E54002B6970 /* LocalSearchRepository.swift */; };
+		A6A5BB352BD3948E002B6970 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB342BD3948E002B6970 /* Dependencies.swift */; };
+		A6A5BB3A2BD3B997002B6970 /* ArcadeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		A6A5BB2A2BD2F933002B6970 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchScreen.swift; path = Otoge/Features/Search/SearchScreen.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB2D2BD32C7D002B6970 /* SearchResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultScreen.swift; path = Otoge/Features/SearchResult/SearchResultScreen.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB2F2BD32C84002B6970 /* SearchResultFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultFeature.swift; path = Otoge/Features/SearchResult/SearchResultFeature.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB322BD38E54002B6970 /* LocalSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalSearchRepository.swift; path = Otoge/Repositories/LocalSearch/LocalSearchRepository.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB342BD3948E002B6970 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dependencies.swift; path = Otoge/Dependencies.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeCell.swift; path = Otoge/Features/SearchResult/Views/ArcadeCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 		A62E8F142BD2908700B9DCE1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A6A5BB312BD38E40002B6970 /* LocalSearch */,
 				A62E8F212BD293B800B9DCE1 /* Arcade */,
 			);
 			path = Repositories;
@@ -180,6 +187,7 @@
 				A67CD0C72BD28432009E4C8E /* otoge.entitlements */,
 				A67CD0C82BD28432009E4C8E /* Preview Content */,
 				A62E8F122BD288DA00B9DCE1 /* MainApp.swift */,
+				A6A5BB342BD3948E002B6970 /* Dependencies.swift */,
 			);
 			path = otoge;
 			sourceTree = "<group>";
@@ -259,10 +267,27 @@
 		A6A5BB2C2BD32C71002B6970 /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				A6A5BB362BD3B96E002B6970 /* Views */,
 				A6A5BB2D2BD32C7D002B6970 /* SearchResultScreen.swift */,
 				A6A5BB2F2BD32C84002B6970 /* SearchResultFeature.swift */,
 			);
 			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		A6A5BB312BD38E40002B6970 /* LocalSearch */ = {
+			isa = PBXGroup;
+			children = (
+				A6A5BB322BD38E54002B6970 /* LocalSearchRepository.swift */,
+			);
+			path = LocalSearch;
+			sourceTree = "<group>";
+		};
+		A6A5BB362BD3B96E002B6970 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,14 +438,17 @@
 				A6A5BB1D2BD2B68B002B6970 /* ArcadeDetailScreen.swift in Sources */,
 				A62E8F1B2BD291CE00B9DCE1 /* Game.swift in Sources */,
 				A62E8F262BD296B300B9DCE1 /* OtogeArcade.swift in Sources */,
+				A6A5BB352BD3948E002B6970 /* Dependencies.swift in Sources */,
 				A67CD0F22BD28611009E4C8E /* HomeScreen.swift in Sources */,
 				A6A5BB272BD2F8C9002B6970 /* SearchFeature.swift in Sources */,
 				A62E8F192BD290CA00B9DCE1 /* Location.swift in Sources */,
 				A6A5BB192BD2B59A002B6970 /* ArcadeDetailFeature.swift in Sources */,
 				A62E8F202BD2935900B9DCE1 /* ArcadeRepository.swift in Sources */,
+				A6A5BB332BD38E54002B6970 /* LocalSearchRepository.swift in Sources */,
 				A6A5BB302BD32C84002B6970 /* SearchResultFeature.swift in Sources */,
 				A67CD0F42BD28618009E4C8E /* HomeFeature.swift in Sources */,
 				A62E8F172BD290AD00B9DCE1 /* Arcade.swift in Sources */,
+				A6A5BB3A2BD3B997002B6970 /* ArcadeCell.swift in Sources */,
 				A6A5BB2E2BD32C7D002B6970 /* SearchResultScreen.swift in Sources */,
 				A62E8F282BD2975600B9DCE1 /* OtogeCabinet.swift in Sources */,
 			);

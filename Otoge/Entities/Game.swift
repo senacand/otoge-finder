@@ -69,8 +69,59 @@ extension Game {
             "ongeki"
         case .projectDiva:
             "project_diva"
-        default:
+        case .soundVoltex:
+            "sdvx"
+        case .polarisChord:
+            "polarischord"
+        case .beatmaniaIidx:
+            "iidx"
+        case .danceDanceRevolution:
+            "ddr"
+        case .gitadoraDrumMania, .gitadoraGuitarFreaks:
+            "gitadora"
+        case .popNMusic:
+            "popnmusic"
+        case .danceRushStardom:
+            "drs"
+        case .reflecBeat:
+            "reflecbeat"
+        case .jubeat:
+            "jubeat"
+        case .other:
             nil
+        }
+    }
+    
+    var priority: Int {
+        switch self {
+        case .maimaiDx:
+            0
+        case .ongeki:
+            1
+        case .chunithm:
+            2
+        case .soundVoltex:
+            3
+        case .beatmaniaIidx:
+            4
+        case .polarisChord:
+            5
+        case .danceRushStardom:
+            6
+        case .danceDanceRevolution:
+            7
+        case .gitadoraDrumMania, .gitadoraGuitarFreaks:
+            8
+        case .projectDiva:
+            9
+        case .popNMusic:
+            10
+        case .reflecBeat:
+            11
+        case .jubeat:
+            12
+        case .other:
+            13
         }
     }
 }

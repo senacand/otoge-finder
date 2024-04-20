@@ -35,13 +35,13 @@ struct HomeFeature {
         var arcades: [Arcade] = []
         var locationAuthorisationStatus: CLAuthorizationStatus = .notDetermined
         var hasAppeared: Bool = false
-        var lastSearchedArea: CLLocation?
+        var searchedArea: CLLocation?
         
         @Presents var arcadeDetailState: ArcadeDetailFeature.State?
         @Presents var searchState: SearchFeature.State?
         @Presents var searchResultState: SearchResultFeature.State?
         
-        var searchDetent: PresentationDetent = .height(100)
+        var searchDetent: PresentationDetent = .height(120)
     }
     
     struct MapCenter: Equatable {
@@ -177,7 +177,7 @@ struct HomeFeature {
                 
             case .searchAction(.presented(.searchCurrentAreaTapped)):
                 state.searchState?.isLoading = true
-                state.lastSearchedArea = state.mapCenter.coordinate
+                state.searchedArea = state.mapCenter.coordinate
                 return .run { [mapCenter = state.mapCenter] send in
                     let arcades = await repository.getArcadesByPosition(
                         latitude: mapCenter.latitude,
@@ -191,8 +191,13 @@ struct HomeFeature {
                     )
                 }
                 
-            case .searchAction(.presented(.mapItemTapped(let mapItem))):
+            case .searchAction(.presented(.goToMapItem(let mapItem))):
                 state.searchState?.isLoading = true
+                state.searchedArea = .init(
+                    latitude: mapItem.placemark.coordinate.latitude,
+                    longitude: mapItem.placemark.coordinate.longitude
+                )
+                
                 return .run { send in
                     let arcades = await repository.getArcadesByPosition(
                         latitude: mapItem.placemark.coordinate.latitude,
@@ -210,19 +215,25 @@ struct HomeFeature {
                 state.searchDetent = .fraction(0.99)
                 
             case .searchAction(.presented(.collapseDetent)):
-                state.searchDetent = .height(100)
+                state.searchDetent = .height(120)
                 
             case .searchDetentUpdated(let detent):
                 state.searchDetent = detent
                 
             case .searchResultAction(.presented(.arcadeTapped(let arcade))):
-                state.arcadeDetailState = .init(arcade: arcade)
-                state.selectedArcade = arcade
+                return .run { send in
+                    await send(.arcadeSelected(arcade: arcade))
+                }
                 
             case .searchResultAction(.dismiss),
                  .searchResultAction(.presented(.dismiss)):
                 state.arcades = []
                 state.searchResultState = nil
+                state.searchedArea = nil
+                
+                if !(state.searchState?.searchText.isEmpty ?? true) {
+                    state.searchState?.isTextFieldFocused = true
+                }
                 
             case .searchResultAction:
                 break

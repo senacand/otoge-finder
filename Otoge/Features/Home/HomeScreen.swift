@@ -21,17 +21,53 @@ struct HomeScreen: View {
                 .selectedArcade
                 .sending(\.arcadeSelected)
         ) {
-            ForEach(store.arcades, id: \.self) { arcade in
+            if let searchedArea = store.searchedArea {
                 Marker(
-                    arcade.name,
-                    systemImage: "mappin",
-                    coordinate:
-                        CLLocationCoordinate2D(
-                            latitude: arcade.location.latitude,
-                            longitude: arcade.location.longitude
-                        )
+                    "",
+                    systemImage: "magnifyingglass",
+                    coordinate: searchedArea.coordinate
                 )
-                .tag(arcade)
+                .tint(.white)
+            }
+            
+            ForEach(store.arcades, id: \.self) { arcade in
+                if let brandImage = arcade.brand?.imageString {
+                    Annotation(
+                        arcade.name,
+                        coordinate:
+                            .init(
+                                latitude: arcade.location.latitude,
+                                longitude: arcade.location.longitude
+                            ),
+                        anchor: .center
+                    ) {
+                        Image(brandImage, bundle: nil)
+                            .resizable()
+                            .frame(
+                                width:
+                                    store.selectedArcade == arcade
+                                    ? 42 : 32,
+                                height:
+                                    store.selectedArcade == arcade
+                                    ? 42 : 32
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: 8.0))
+                            .animation(.bouncy, value: store.selectedArcade)
+                    }
+                    .tag(arcade)
+                }
+                else {
+                    Marker(
+                        arcade.name,
+                        systemImage: "mappin",
+                        coordinate:
+                                .init(
+                                    latitude: arcade.location.latitude,
+                                    longitude: arcade.location.longitude
+                                )
+                    )
+                    .tag(arcade)
+                }
             }
         }
         .animation(.snappy, value: store.mapCameraPosition)
@@ -56,7 +92,7 @@ struct HomeScreen: View {
             NavigationStack {
                 SearchScreen(store: searchStore)
             }
-            .presentationDetents([.height(100), .fraction(0.99)], selection: $store.searchDetent.sending(\.searchDetentUpdated))
+            .presentationDetents([.height(120), .fraction(0.99)], selection: $store.searchDetent.sending(\.searchDetentUpdated))
             .presentationDragIndicator(.visible)
             .presentationBackgroundInteraction(.enabled)
             .interactiveDismissDisabled()
@@ -84,7 +120,7 @@ struct HomeScreen: View {
                     NavigationStack {
                         ArcadeDetailScreen(store: store)
                     }
-                    .presentationDetents([.height(350), .fraction(0.99)])
+                    .presentationDetents([.height(250), .fraction(0.99)])
                     .presentationDragIndicator(.automatic)
                     .presentationBackgroundInteraction(.enabled)
                     .interactiveDismissDisabled()

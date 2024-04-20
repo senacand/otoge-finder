@@ -13,7 +13,7 @@ struct SearchScreen: View {
     @FocusState var searchTextFieldFocus: Bool
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             HStack {
                 searchInput
             }
@@ -21,27 +21,31 @@ struct SearchScreen: View {
             .padding(.horizontal)
             
             if !store.isLoading {
-                if store.searchResult.isEmpty {
+                if store.searchCompletionResult.isEmpty {
                     if !store.isCancelButtonShown {
-                        Button {
+                        Button(
+                            "Search within this area",
+                            systemImage: "doc.text.magnifyingglass"
+                        ) {
                             store.send(.searchCurrentAreaTapped)
-                        } label: {
-                            HStack {
-                                Image(systemName: "doc.text.magnifyingglass")
-                                Text("Search within this area")
-                            }
-                            .frame(maxWidth: .infinity)
                         }
-                        .padding(.top, 8.0)
+                        .buttonStyle(BorderedProminentButtonStyle())
+                        .padding(.top, 4.0)
                     }
                     Spacer()
                 }
                 else {
                     List {
                         Section {
-                            ForEach(store.searchResult, id: \.self) { item in
-                                Button(item.name ?? "") {
-                                    store.send(.mapItemTapped(item))
+                            ForEach(store.searchCompletionResult, id: \.self) { item in
+                                Button {
+                                    store.send(.searchCompletionTapped(item))
+                                } label: {
+                                    VStack(alignment: .leading) {
+                                        Text(item.title)
+                                        Text(item.subtitle)
+                                            .font(.caption)
+                                    }
                                 }
                                 .foregroundColor(.primary)
                             }
@@ -57,6 +61,9 @@ struct SearchScreen: View {
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .center)
             }
         }
+        .onAppear {
+            store.send(.onAppear)
+        }
     }
     
     var searchInput: some View {
@@ -65,12 +72,12 @@ struct SearchScreen: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.secondary)
                 TextField(
-                    "Search Maps",
+                    "Search somewhere else",
                     text: $store.searchText.sending(\.searchTextChanged)
                 )
                 .focused($searchTextFieldFocus)
                 .onSubmit {
-                    store.send(.searchSubmitted)
+                    store.send(.textFieldFocusChanged(false))
                 }
                 .bind($store.isTextFieldFocused.sending(\.textFieldFocusChanged), to: $searchTextFieldFocus)
             }
@@ -87,9 +94,15 @@ struct SearchScreen: View {
                 .padding(.leading, 4.0)
             }
         }
-        .onChange(of: store.searchResult) {
-            if !store.searchResult.isEmpty {
+        .animation(.snappy, value: store.isCancelButtonShown)
+        .onChange(of: store.isTextFieldFocused) { _, isFocused in
+            if isFocused {
                 store.send(.expandDetent)
+            }
+        }
+        .onChange(of: store.isCancelButtonShown) { _, shown in
+            if !shown {
+                store.send(.collapseDetent)
             }
         }
     }

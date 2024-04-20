@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 struct ArcadeDetailScreen: View {
-    let store: StoreOf<ArcadeDetailFeature>
+    @Bindable var store: StoreOf<ArcadeDetailFeature>
     
     var body: some View {
         ScrollView {
@@ -26,27 +26,45 @@ struct ArcadeDetailScreen: View {
                     .padding(.horizontal)
             }
         }
+        .confirmationDialog(
+            "Which Maps app to use?",
+            isPresented: $store
+                .isMapsSelectionActionSheetShown
+                .sending(\.mapsSelectionActionSheetShown)
+        ) {
+            Button("Apple Maps") { 
+                guard let url = store.arcade.location.appleMapsUrl else {
+                    return
+                }
+                UIApplication.shared.open(url)
+            }
+            Button("Google Maps") { 
+                guard let url = store.arcade.location.googleMapsUrl else {
+                    return
+                }
+                UIApplication.shared.open(url)
+            }
+            
+            Button("Cancel", role: .cancel) {
+                store.send(.mapsSelectionActionSheetShown(false))
+            }
+        }
     }
 }
 
 extension ArcadeDetailScreen {
     private var titleSection: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .top) {
                 Text(store.arcade.name)
-                    .font(.largeTitle)
+                    .font(.title)
                     .fontWeight(.bold)
                 Spacer()
                 Button {
-                    guard let url = store.arcade.location.appleMapsUrl else {
-                        return
-                    }
-                    #if os(iOS)
-                    UIApplication.shared.open(url)
-                    #endif
+                    store.send(.mapsSelectionActionSheetShown(true))
                 } label: {
                     Image(systemName: "map")
-                        .fontWeight(.bold)
+                        .fontWeight(.medium)
                         .padding(.all, 8.0)
                         .background(.quaternary)
                         .foregroundStyle(.gray)
@@ -56,7 +74,7 @@ extension ArcadeDetailScreen {
                     store.send(.dismiss)
                 } label: {
                     Image(systemName: "xmark")
-                        .fontWeight(.bold)
+                        .fontWeight(.medium)
                         .padding(.all, 8.0)
                         .background(.quaternary)
                         .foregroundStyle(.gray)
@@ -67,9 +85,10 @@ extension ArcadeDetailScreen {
             if let alternateName = store.arcade.alternateName,
                 !alternateName.isEmpty
             {
-                Text(alternateName)
-                    .fontWeight(.bold)
+                Text(alternateName.capitalized)
+                    .fontWeight(.medium)
                     .foregroundStyle(.secondary)
+                    .padding(.bottom, 4.0)
             }
             
             Text(
@@ -85,7 +104,7 @@ extension ArcadeDetailScreen {
     }
     
     private var gamesSection: some View {
-        LazyVStack(alignment: .leading) {
+        VStack(alignment: .leading) {
             ForEach(store.arcade.games, id: \.self) { game in
                 ArcadeGameCell(game: game)
                 if game != store.arcade.games.last {
@@ -136,5 +155,9 @@ extension ArcadeDetailScreen {
 private extension Location {
     var appleMapsUrl: URL? {
         URL(string: "maps://?daddr=\(latitude),\(longitude)")
+    }
+    
+    var googleMapsUrl: URL? {
+        URL(string: "https://www.google.com/maps/dir/?api=1&destination=\(latitude),\(longitude)")
     }
 }

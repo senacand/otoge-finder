@@ -15,34 +15,7 @@ struct SearchResultScreen: View {
         List {
             titleSection
                 .padding(.top, 8.0)
-            Section {
-                ForEach(store.arcades, id: \.self) { arcade in
-                    Button {
-                        store.send(.arcadeTapped(arcade))
-                    } label: {
-                        HStack(alignment: .top, spacing: 16.0) {
-                            if let brandImageString = arcade.brand?.imageString {
-                                Image(uiImage: UIImage(named: brandImageString)!)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 24, height: 24)
-                            }
-                            else {
-                                Image(systemName: "mappin.and.ellipse")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 24, height: 24)
-                            }
-                            VStack(alignment: .leading) {
-                                Text(arcade.name)
-                                Text(arcade.location.address)
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                }
-            }
+            arcadeListSection
         }
         .listStyle(.plain)
     }
@@ -73,6 +46,16 @@ extension SearchResultScreen {
             }
         }
         .buttonStyle(PlainButtonStyle())
+    }
+    
+    private var arcadeListSection: some View {
+        Section {
+            ForEach(store.arcades, id: \.self) { arcade in
+                ArcadeCell(arcade: arcade) {
+                    store.send(.arcadeTapped(arcade))
+                }
+            }
+        }
     }
 }
 

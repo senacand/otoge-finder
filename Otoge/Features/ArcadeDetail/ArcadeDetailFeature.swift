@@ -14,11 +14,13 @@ struct ArcadeDetailFeature {
         let arcade: Arcade
         
         var isAlternateAddress = false
+        var isMapsSelectionActionSheetShown = false
     }
     
     enum Action {
         case dismiss
         case toggleAlternateAddress
+        case mapsSelectionActionSheetShown(Bool)
     }
     
     var body: some ReducerOf<Self> {
@@ -28,6 +30,8 @@ struct ArcadeDetailFeature {
                 break
             case .toggleAlternateAddress:
                 state.isAlternateAddress = !state.isAlternateAddress
+            case .mapsSelectionActionSheetShown(let shown):
+                state.isMapsSelectionActionSheetShown = shown
             }
             
             return .none
