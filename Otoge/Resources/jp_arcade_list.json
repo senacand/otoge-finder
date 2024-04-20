@@ -1826,6 +1826,9 @@
             },
             {
                 "game": "BEATMANIA_IIDX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -1861,6 +1864,27 @@
         "alternateArea": "SHIGA KEN",
         "alternateStoreName": "GAME FIELD MORIYAMA TEN",
         "alternateAddress": "SHIGA KEN MORIYAMA SHI IMAHAMA MACHI 2 6 2 0 − 5 PIERI MORIYAMA 1 F"
+    },
+    {
+        "country": "JP",
+        "area": "栃木県",
+        "storeName": "GAME GETーBee VAL小山店",
+        "address": "栃木県小山市城山町3丁目3番地22号",
+        "lat": 36.3126948,
+        "lng": 139.8066084,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "8",
+            "allNetSid": "18929"
+        },
+        "alternateArea": "TOCHIGI KEN",
+        "alternateStoreName": "GAME GET BEE VAL KOYAMA TEN",
+        "alternateAddress": "TOCHIGI KEN OYAMA SHI JOYAMA MACHI 3 CHOME 3 BANCHI 22 GO"
     },
     {
         "country": "JP",
@@ -2552,6 +2576,9 @@
             },
             {
                 "game": "SOUND_VOLTEX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -2730,6 +2757,9 @@
             },
             {
                 "game": "BEATMANIA_IIDX_LIGHTNING_MODEL"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -3487,6 +3517,9 @@
             },
             {
                 "game": "BEATMANIA_IIDX_LIGHTNING_MODEL"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -4176,6 +4209,9 @@
             },
             {
                 "game": "DANCERUSH_STARDOM"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -4707,6 +4743,9 @@
             },
             {
                 "game": "SOUND_VOLTEX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -5571,6 +5610,31 @@
     },
     {
         "country": "JP",
+        "area": "山形県",
+        "storeName": "GiGO新庄",
+        "address": "山形県新庄市金沢1068",
+        "lat": 38.7646694,
+        "lng": 140.3084662,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "5",
+            "allNetSid": "19043",
+            "eAmusementFdesc": "1f89d6c7a21af80bfe4b4f258ed16694"
+        },
+        "alternateArea": "YAMAGATA KEN",
+        "alternateStoreName": "GIGO SHINJO",
+        "alternateAddress": "YAMAGATA KEN SHINJO SHI KANAZAWA 1068"
+    },
+    {
+        "country": "JP",
         "area": "神奈川県",
         "storeName": "GiGO新杉田",
         "address": "神奈川県横浜市磯子区杉田1-1-1らびすた新杉田2F",
@@ -5799,6 +5863,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -6518,6 +6585,9 @@
             },
             {
                 "game": "DANCERUSH_STARDOM"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -6983,6 +7053,9 @@
             },
             {
                 "game": "SOUND_VOLTEX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -7135,6 +7208,9 @@
             },
             {
                 "game": "SOUND_VOLTEX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -7385,6 +7461,9 @@
             },
             {
                 "game": "BEATMANIA_IIDX_LIGHTNING_MODEL"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -7554,6 +7633,31 @@
         "alternateArea": "KANAGAWA KEN",
         "alternateStoreName": "GIGO TSUNASHIMA",
         "alternateAddress": "KANAGAWA KEN YOKOHAMA SHI KOHOKU KU TSUNASHIMANISHI 2 − 6 − 2 9"
+    },
+    {
+        "country": "JP",
+        "area": "東京都",
+        "storeName": "GiGO総本店",
+        "address": "東京都豊島区東池袋一丁目13番6号",
+        "lat": 35.7295307,
+        "lng": 139.7147102,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "12",
+            "allNetSid": "19064",
+            "eAmusementFdesc": "7aa8686e93eb786a43a6e0d7e166f636"
+        },
+        "alternateArea": "TOKYO TO",
+        "alternateStoreName": "GIGO SO HONTEN",
+        "alternateAddress": "TOKYO TO TOSHIMA KU HIGASHIIKEBUKURO ICHI CHOME 13 BAN 6 GO"
     },
     {
         "country": "JP",
@@ -9077,25 +9181,6 @@
     {
         "country": "JP",
         "area": "福井県",
-        "storeName": "Let's Waku2 ベル店",
-        "address": "福井市花堂南2-16-1",
-        "lat": 36.03383952,
-        "lng": 136.2120541,
-        "cabinets": [
-            {
-                "game": "POP_N_MUSIC"
-            }
-        ],
-        "context": {
-            "eAmusementFdesc": "e95f526e278c47beddf91f2558cc5ad0"
-        },
-        "alternateArea": "FUKUI KEN",
-        "alternateStoreName": "LET ' S WAKU 2 BERU TEN",
-        "alternateAddress": "FUKUI SHI HANANDOMINAMI 2 - 16 - 1"
-    },
-    {
-        "country": "JP",
-        "area": "福井県",
         "storeName": "Let’s WAKU2 エルパ",
         "address": "福井県福井市大和田2-1212",
         "lat": 36.0957091,
@@ -9116,6 +9201,25 @@
         "alternateArea": "FUKUI KEN",
         "alternateStoreName": "LET ' S WAKU 2 ERU PA",
         "alternateAddress": "FUKUI KEN FUKUI SHI OWADA 2 - 1212"
+    },
+    {
+        "country": "JP",
+        "area": "福井県",
+        "storeName": "Let's Waku2 ベル店",
+        "address": "福井市花堂南2-16-1",
+        "lat": 36.03383952,
+        "lng": 136.2120541,
+        "cabinets": [
+            {
+                "game": "POP_N_MUSIC"
+            }
+        ],
+        "context": {
+            "eAmusementFdesc": "e95f526e278c47beddf91f2558cc5ad0"
+        },
+        "alternateArea": "FUKUI KEN",
+        "alternateStoreName": "LET ' S WAKU 2 BERU TEN",
+        "alternateAddress": "FUKUI SHI HANANDOMINAMI 2 - 16 - 1"
     },
     {
         "country": "JP",
@@ -9484,6 +9588,46 @@
     },
     {
         "country": "JP",
+        "area": "長崎県",
+        "storeName": "namcoアミュプラザ長崎新館",
+        "address": "長崎県長崎市尾上町1番1号 アミュプラザ長崎新館4階",
+        "lat": 32.7516252,
+        "lng": 129.8709304,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "41",
+            "allNetSid": "19029"
+        },
+        "alternateArea": "NAGASAKI KEN",
+        "alternateStoreName": "NAMCO AMYUPURAZA NAGASAKI SHINKAN",
+        "alternateAddress": "NAGASAKI KEN NAGASAKI SHI ONOE MACHI 1 BAN 1 GO AMYUPURAZA NAGASAKI SHINKAN 4 KAI"
+    },
+    {
+        "country": "JP",
+        "area": "長崎県",
+        "storeName": "namcoアミュプラザ長崎新館店",
+        "address": "長崎市尾上町1-1アミュプラザ長崎新館4F",
+        "lat": 32.75182377,
+        "lng": 129.8704117,
+        "cabinets": [
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "eAmusementFdesc": "8925dfb0185e117617c6bf00d75a224a"
+        },
+        "alternateArea": "NAGASAKI KEN",
+        "alternateStoreName": "NAMCO AMYUPURAZA NAGASAKI SHINKAN TEN",
+        "alternateAddress": "NAGASAKI SHI ONOE MACHI 1 - 1 AMYUPURAZA NAGASAKI SHINKAN 4 F"
+    },
+    {
+        "country": "JP",
         "area": "長野県",
         "storeName": "namcoアリオ上田店",
         "address": "長野県上田市天神3-5-1アリオ上田店内",
@@ -9509,6 +9653,27 @@
         "alternateArea": "NAGANO KEN",
         "alternateStoreName": "NAMCO ARIO UEDA TEN",
         "alternateAddress": "NAGANO KEN UEDA SHI TENJIN 3 - 5 - 1 ARIO UEDA TENNAI"
+    },
+    {
+        "country": "JP",
+        "area": "千葉県",
+        "storeName": "namcoアリオ市原店",
+        "address": "千葉県市原市更級4丁目3番2号アリオ市原2階",
+        "lat": 35.5080656,
+        "lng": 140.1014345,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "11",
+            "allNetSid": "18916"
+        },
+        "alternateArea": "CHIBA KEN",
+        "alternateStoreName": "NAMCO ARIO ICHIHARA TEN",
+        "alternateAddress": "CHIBA KEN ICHIHARA SHI SARASHINA 4 CHOME 3 BAN 2 GO ARIO ICHIHARA 2 KAI"
     },
     {
         "country": "JP",
@@ -11252,6 +11417,9 @@
             },
             {
                 "game": "DANCERUSH_STARDOM"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -11725,6 +11893,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -11817,6 +11988,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -12521,6 +12695,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -13094,6 +13271,27 @@
         "alternateArea": "AKITA KEN",
         "alternateStoreName": "SOYUGAMEFIELD NOSHIRO TEN",
         "alternateAddress": "AKITA KEN NOSHIRO SHI 鰄 FUCHI JI FURUYASHIKI 1 BAN ION TAUN NOSHIRO NAI"
+    },
+    {
+        "country": "JP",
+        "area": "山形県",
+        "storeName": "SOYUGameField酒田店",
+        "address": "山形県酒田市泉町198番地イオンタウン酒田内",
+        "lat": 38.9357019,
+        "lng": 139.846927,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "5",
+            "allNetSid": "19015"
+        },
+        "alternateArea": "YAMAGATA KEN",
+        "alternateStoreName": "SOYUGAMEFIELD SAKATA TEN",
+        "alternateAddress": "YAMAGATA KEN SAKATA SHI IZUMI MACHI 198 BANCHI ION TAUN SAKATA NAI"
     },
     {
         "country": "JP",
@@ -14163,6 +14361,27 @@
         "alternateArea": "FUKUOKA KEN",
         "alternateStoreName": "ASOBIKURU SHINGU TEN",
         "alternateAddress": "FUKUOKA KEN KASUYA GUN SHINGU MACHI SAN DAI 9 9 9 BANCHI 1"
+    },
+    {
+        "country": "JP",
+        "area": "長崎県",
+        "storeName": "アソビクル長崎戸町店",
+        "address": "長崎県長崎市戸町4‐9‐3",
+        "lat": 32.7211376,
+        "lng": 129.8611866,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "41",
+            "allNetSid": "19010"
+        },
+        "alternateArea": "NAGASAKI KEN",
+        "alternateStoreName": "ASOBIKURU NAGASAKI TO MACHI TEN",
+        "alternateAddress": "NAGASAKI KEN NAGASAKI SHI TO MACHI 4 ‐ 9 ‐ 3"
     },
     {
         "country": "JP",
@@ -15663,6 +15882,27 @@
     },
     {
         "country": "JP",
+        "area": "愛知県",
+        "storeName": "アピナ名古屋栄店",
+        "address": "愛知県名古屋市中区錦3‐17‐15ドン・キホーテ栄本店B1",
+        "lat": 35.1702098,
+        "lng": 136.9063906,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "22",
+            "allNetSid": "19016"
+        },
+        "alternateArea": "AICHI KEN",
+        "alternateStoreName": "APINA NAGOYA SAKAE TEN",
+        "alternateAddress": "AICHI KEN NAGOYA SHI NAKA KU NISHIKI 3 ‐ 17 ‐ 15 DONKIHOTE SAKAE HONTEN B 1"
+    },
+    {
+        "country": "JP",
         "area": "三重県",
         "storeName": "アピナ四日市店",
         "address": "三重県四日市市泊小柳町4-34",
@@ -16257,16 +16497,22 @@
             },
             {
                 "game": "CHUNITHM_NEW"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
             "allNetCt": "1000",
             "allNetAt": "10",
-            "allNetSid": "24825"
+            "allNetSid": "24825",
+            "eAmusementFdesc": "36440fa29cd1c51a87b57bfe13046245"
         },
         "alternateArea": "SAITAMA KEN",
         "alternateStoreName": "APINA KAWAGOE TEN",
-        "alternateAddress": "SAITAMA KEN KAWAGOE SHI IZUMI MACHI 1 − 1 UNI KUSU MINAMI FURUYA SHINEMA TO 1 F"
+        "alternateAddress": "SAITAMA KEN KAWAGOE SHI IZUMI MACHI 1 − 1 UNI KUSU MINAMI FURUYA SHINEMA TO 1 F",
+        "access": "JR川越線南古谷駅徒歩3分",
+        "openingHours": "10:00～24:00"
     },
     {
         "country": "JP",
@@ -16294,6 +16540,31 @@
         "alternateArea": "CHIBA KEN",
         "alternateStoreName": "APINA ICHIHARA TEN",
         "alternateAddress": "CHIBA KEN ICHIHARA SHI SARASHINA 4 CHOME 2 BAN 1 GO AKU ROSU PURAZA ICHIHARA SARASHINA F TO 1 KAI"
+    },
+    {
+        "country": "JP",
+        "area": "東京都",
+        "storeName": "アピナ成増店",
+        "address": "東京都板橋区成増二丁目21番2号 メガドンキホーテ成増店5階",
+        "lat": 35.7781263,
+        "lng": 139.6304404,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "12",
+            "allNetSid": "18928",
+            "eAmusementFdesc": "dc147fbebb80c64d32e16bd5ab4769d7"
+        },
+        "alternateArea": "TOKYO TO",
+        "alternateStoreName": "APINA NARIMASU TEN",
+        "alternateAddress": "TOKYO TO ITABASHI KU NARIMASU NI CHOME 21 BAN 2 GO MEGA DONKIHOTE NARIMASU TEN 5 KAI"
     },
     {
         "country": "JP",
@@ -16531,6 +16802,9 @@
             },
             {
                 "game": "BEATMANIA_IIDX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -22258,6 +22532,32 @@
     },
     {
         "country": "JP",
+        "area": "香川県",
+        "storeName": "えの木 高松店",
+        "address": "香川県高松市藤塚町3丁目3-3",
+        "lat": 34.33588,
+        "lng": 134.0537325,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "36",
+            "allNetSid": "19031",
+            "eAmusementFdesc": "60fb19cae810d417e4e7b7ae19ca3385"
+        },
+        "alternateArea": "KAGAWA KEN",
+        "alternateStoreName": "E NO KI TAKAMATSU TEN",
+        "alternateAddress": "KAGAWA KEN TAKAMATSU SHI FUJITSUKA MACHI 3 CHOME 3 - 3",
+        "openingHours": "平日14:00～24:00 土日祝10:00～24:00"
+    },
+    {
+        "country": "JP",
         "area": "大阪府",
         "storeName": "エンジョイパラダイス",
         "address": "大阪府東大阪市長栄寺7-3パーラーメトロ永和店2F",
@@ -22387,6 +22687,9 @@
             },
             {
                 "game": "DANCEDANCEREVOLUTION"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -26679,6 +26982,9 @@
             },
             {
                 "game": "CHUNITHM_NEW"
+            },
+            {
+                "game": "MAIMAI_DX"
             }
         ],
         "context": {
@@ -26918,6 +27224,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -30116,6 +30425,9 @@
             },
             {
                 "game": "BEATMANIA_IIDX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -30154,6 +30466,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -32973,7 +33288,7 @@
         "context": {
             "allNetCt": "1000",
             "allNetAt": "22",
-            "allNetSid": "23097",
+            "allNetSid": "18922",
             "eAmusementFdesc": "4699cfb76e92e1e62fa15229614ce67a"
         },
         "alternateArea": "AICHI KEN",
@@ -35977,6 +36292,25 @@
     },
     {
         "country": "JP",
+        "area": "神奈川県",
+        "storeName": "テクモピア座間店",
+        "address": "座間市ひばりが丘4-11-48",
+        "lat": 35.48001079,
+        "lng": 139.431891,
+        "cabinets": [
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "eAmusementFdesc": "380afb1d7b30d79f12591ae95d575fe1"
+        },
+        "alternateArea": "KANAGAWA KEN",
+        "alternateStoreName": "TEKUMOPIA ZAMA TEN",
+        "alternateAddress": "ZAMA SHI HIBARIGAOKA 4 - 11 - 48"
+    },
+    {
+        "country": "JP",
         "area": "千葉県",
         "storeName": "テクモピア船橋南口店",
         "address": "千葉県船橋市本町1ー7ー6ドリーム船橋ビル3F",
@@ -37194,6 +37528,9 @@
         "cabinets": [
             {
                 "game": "CHUNITHM_NEW"
+            },
+            {
+                "game": "MAIMAI_DX"
             }
         ],
         "context": {
@@ -37368,6 +37705,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -37701,6 +38041,9 @@
             },
             {
                 "game": "SOUND_VOLTEX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -38099,6 +38442,27 @@
         "alternateAddress": "CHIBA KEN CHIBA SHI INAGE KU NAGANUMAHARA MACHI 731 - 17 FURESUPO INAGE A 2 MUNE 4",
         "access": "JR稲毛駅より京成バス山王町行き、ヴィルフォーレ下車2分",
         "openingHours": "9:00～24:00"
+    },
+    {
+        "country": "JP",
+        "area": "新潟県",
+        "storeName": "ハローズガーデンプラス新発田店",
+        "address": "新潟県新発田市住吉町5‐11‐5イオンモール新発田店2階",
+        "lat": 37.942552,
+        "lng": 139.3088201,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "14",
+            "allNetSid": "19089"
+        },
+        "alternateArea": "NIGATA KEN",
+        "alternateStoreName": "HAROZUGADEMPURASU SHIBATA TEN",
+        "alternateAddress": "NIGATA KEN SHIBATA SHI SUMIYOSHI MACHI 5 ‐ 11 ‐ 5 ION MORU SHIBATA TEN 2 KAI"
     },
     {
         "country": "JP",
@@ -39328,6 +39692,27 @@
         "alternateAddress": "OKAYAMA KEN KURASHIKI SHI NIKURA SHIKI EKIMAE 5 − 1 9 4",
         "access": "JR西日本山陽本線「新倉敷」駅から南西に徒歩10分",
         "openingHours": "12:00～24:00"
+    },
+    {
+        "country": "JP",
+        "area": "愛知県",
+        "storeName": "ファンタジックランド西春店",
+        "address": "愛知県北名古屋市鹿田若宮3926‐10ヨシズヤ西春店5階",
+        "lat": 35.2449611,
+        "lng": 136.8717714,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX"
+            }
+        ],
+        "context": {
+            "allNetCt": "1000",
+            "allNetAt": "22",
+            "allNetSid": "18908"
+        },
+        "alternateArea": "AICHI KEN",
+        "alternateStoreName": "FUANTAJIKKURANDO NISHIHARU TEN",
+        "alternateAddress": "AICHI KEN KITA NAGOYA SHI KATSUTA WAKAMIYA 3926 ‐ 10 YOSHIZUYA NISHIHARU TEN 5 KAI"
     },
     {
         "country": "JP",
@@ -42475,6 +42860,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -42660,6 +43048,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -42842,6 +43233,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -43223,6 +43617,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -43395,6 +43792,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -43704,6 +44104,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -44013,6 +44416,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -44221,6 +44627,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -50746,6 +51155,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -51982,6 +52394,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -52108,6 +52523,9 @@
             },
             {
                 "game": "POP_N_MUSIC"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -52145,6 +52563,9 @@
             },
             {
                 "game": "JUBEAT"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -53154,6 +53575,25 @@
     },
     {
         "country": "JP",
+        "area": "北海道",
+        "storeName": "東急百貨店さっぽろアミューズパーク",
+        "address": "札幌市中央区北4条西2-1東急百貨店さっぽろ店内9F",
+        "lat": 43.06640287,
+        "lng": 141.3528873,
+        "cabinets": [
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
+            }
+        ],
+        "context": {
+            "eAmusementFdesc": "66f919761c23240602311388c0ac5899"
+        },
+        "alternateArea": "HOKKAIDO",
+        "alternateStoreName": "TOKYU HYAKKATEN SA PPO RO AMYUZUPAKU",
+        "alternateAddress": "SAPPORO SHI CHUO KU KITA 4 JO NISHI 2 - 1 TOKYU HYAKKATEN SA PPO RO TENNAI 9 F"
+    },
+    {
+        "country": "JP",
         "area": "千葉県",
         "storeName": "柏ガリバー",
         "address": "千葉県柏市柏1-1-11ファミリかしわ地下",
@@ -53192,6 +53632,9 @@
             },
             {
                 "game": "SOUND_VOLTEX"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
@@ -53360,6 +53803,9 @@
             },
             {
                 "game": "GITADORA_GUITARFREAKS"
+            },
+            {
+                "game": "SOUND_VOLTEX_VALKYRIE_MODEL"
             }
         ],
         "context": {
