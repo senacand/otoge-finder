@@ -74,6 +74,7 @@ struct HomeScreen: View {
         .mapControls {
             MapCompass()
             MapUserLocationButton()
+            MapScaleView()
         }
         .onAppear {
             store.send(.onAppear)

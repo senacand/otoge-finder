@@ -26,10 +26,10 @@ extension SearchResultScreen {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("Arcades")
+                    Text("Search")
                         .font(.title)
                         .fontWeight(.bold)
-                    Text("\(store.arcades.count) found")
+                    Text("\(store.arcades.count) arcades found")
                         .font(.subheadline)
                 }
                 Spacer()

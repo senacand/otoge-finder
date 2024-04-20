@@ -24,6 +24,8 @@ struct SearchFeature {
         var isCancelButtonShown: Bool {
             isTextFieldFocused || !searchText.isEmpty
         }
+        
+        var isMapsInCurrentLocation: Bool = true
     }
     
     enum Action {

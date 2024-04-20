@@ -9,9 +9,9 @@ import Foundation
 import MapKit
 
 protocol LocalSearchRepositoryProtocol {
-    var completerResults: AsyncStream<[MKLocalSearchCompletion]> { get }
+    var completerResults: AsyncStream<[MKLocalSearchCompletion]> { get }  // TODO: Abstractize MKLocalSearchCompletion
     func autocompleteWithSearchQuery(_ query: String)
-    func searchLocationWithQuery(_ query: String) async -> [MKMapItem]
+    func searchLocationWithQuery(_ query: String) async -> [MKMapItem]  // TODO: Abstractize MKMapItem
 }
 
 final class MKLocalSearchRepository: NSObject, LocalSearchRepositoryProtocol {

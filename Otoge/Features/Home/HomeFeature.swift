@@ -50,6 +50,8 @@ struct HomeFeature {
         var spanDeltaLatitude: CLLocationDegrees
         var spanDeltaLongitude: CLLocationDegrees
         var distance: Double
+        var pitch: Double
+        var heading: Double
         
         init(_ context: MapCameraUpdateContext) {
             latitude = context.region.center.latitude
@@ -57,6 +59,8 @@ struct HomeFeature {
             spanDeltaLatitude = context.region.span.latitudeDelta
             spanDeltaLongitude = context.region.span.longitudeDelta
             distance = context.camera.distance
+            pitch = context.camera.pitch
+            heading = context.camera.heading
         }
         
         init() {
@@ -65,6 +69,8 @@ struct HomeFeature {
             spanDeltaLatitude = 0
             spanDeltaLongitude = 0
             distance = 0
+            pitch = 0
+            heading = 0
         }
         
         var coordinate: CLLocation {
@@ -113,6 +119,9 @@ struct HomeFeature {
                 
             case .mapCameraPositionChanged(let position):
                 state.mapCameraPosition = position
+                state.searchState?.isMapsInCurrentLocation =
+                    position
+                    .followsUserLocation
                 
             case .mapCameraUpdated(let context):
                 state.mapCenter = MapCenter(context)
@@ -121,22 +130,33 @@ struct HomeFeature {
                 state.arcades = arcades
                 state.searchState?.isLoading = false
                 state.searchResultState = .init(arcades: arcades)
-                state.mapCameraPosition = .automatic
+                
+                return .run { send in
+                    await send(.mapCameraPositionChanged(.automatic))
+                }
                 
             case .arcadeSelected(let arcade):
                 state.selectedArcade = arcade
                 if let arcade {
                     state.arcadeDetailState = .init(arcade: arcade)
-                    state.mapCameraPosition = .camera(
-                        MapCamera(
-                            centerCoordinate:
-                                CLLocationCoordinate2D(
-                                    latitude: arcade.location.latitude,
-                                    longitude: arcade.location.longitude
-                                ),
-                            distance: state.mapCenter.distance
+                    return .run { [mapCenter = state.mapCenter] send in
+                        await send(
+                            .mapCameraPositionChanged(
+                                .camera(
+                                    MapCamera(
+                                        centerCoordinate:
+                                            CLLocationCoordinate2D(
+                                                latitude: arcade.location.latitude,
+                                                longitude: arcade.location.longitude
+                                            ),
+                                        distance: mapCenter.distance,
+                                        heading: mapCenter.heading,
+                                        pitch: mapCenter.pitch
+                                    )
+                                )
+                            )
                         )
-                    )
+                    }
                 }
                 else {
                     state.arcadeDetailState = nil

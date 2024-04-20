@@ -36,6 +36,7 @@
 		A6A5BB332BD38E54002B6970 /* LocalSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB322BD38E54002B6970 /* LocalSearchRepository.swift */; };
 		A6A5BB352BD3948E002B6970 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB342BD3948E002B6970 /* Dependencies.swift */; };
 		A6A5BB3A2BD3B997002B6970 /* ArcadeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */; };
+		A6A5BB3F2BD43877002B6970 /* Nabla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A5BB3E2BD43877002B6970 /* Nabla.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		A6A5BB322BD38E54002B6970 /* LocalSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalSearchRepository.swift; path = Otoge/Repositories/LocalSearch/LocalSearchRepository.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB342BD3948E002B6970 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dependencies.swift; path = Otoge/Dependencies.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeCell.swift; path = Otoge/Features/SearchResult/Views/ArcadeCell.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB3E2BD43877002B6970 /* Nabla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nabla.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,10 +182,10 @@
 		A67CD0C02BD28430009E4C8E /* otoge */ = {
 			isa = PBXGroup;
 			children = (
+				A6A5BB3B2BD436BF002B6970 /* Resources */,
 				A62E8F152BD2908E00B9DCE1 /* Entities */,
 				A62E8F142BD2908700B9DCE1 /* Repositories */,
 				A67CD0EF2BD285FA009E4C8E /* Features */,
-				A67CD0C52BD28432009E4C8E /* Assets.xcassets */,
 				A67CD0C72BD28432009E4C8E /* otoge.entitlements */,
 				A67CD0C82BD28432009E4C8E /* Preview Content */,
 				A62E8F122BD288DA00B9DCE1 /* MainApp.swift */,
@@ -288,6 +290,15 @@
 				A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A6A5BB3B2BD436BF002B6970 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A67CD0C52BD28432009E4C8E /* Assets.xcassets */,
+				A6A5BB3E2BD43877002B6970 /* Nabla.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A5BB3F2BD43877002B6970 /* Nabla.ttf in Resources */,
 				A67CD0CA2BD28432009E4C8E /* Preview Assets.xcassets in Resources */,
 				A67CD0C62BD28432009E4C8E /* Assets.xcassets in Resources */,
 			);

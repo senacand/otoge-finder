@@ -14,23 +14,33 @@ struct SearchScreen: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            HStack {
-                searchInput
-            }
-            .padding(.top, 24)
-            .padding(.horizontal)
+            searchInput
+                .padding(.top, 24)
+                .padding(.horizontal)
             
             if !store.isLoading {
                 if store.searchCompletionResult.isEmpty {
                     if !store.isCancelButtonShown {
-                        Button(
-                            "Search within this area",
-                            systemImage: "doc.text.magnifyingglass"
-                        ) {
-                            store.send(.searchCurrentAreaTapped)
+                        if store.isMapsInCurrentLocation {
+                            Button(
+                                "Search around me",
+                                systemImage: "location.magnifyingglass"
+                            ) {
+                                store.send(.searchCurrentAreaTapped)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.top, 8.0)
                         }
-                        .buttonStyle(BorderedProminentButtonStyle())
-                        .padding(.top, 4.0)
+                        else {
+                            Button(
+                                "Search within this area",
+                                systemImage: "doc.text.magnifyingglass"
+                            ) {
+                                store.send(.searchCurrentAreaTapped)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.top, 8.0)
+                        }
                     }
                     Spacer()
                 }
@@ -53,14 +63,18 @@ struct SearchScreen: View {
                             Text("Matching Locations")
                         }
                     }
-                    
                 }
             }
             else {
                 ProgressView()
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .center)
+                    .frame(
+                        maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
+                        maxHeight: .infinity,
+                        alignment: .center
+                    )
             }
         }
+        .animation(.snappy, value: store.isMapsInCurrentLocation)
         .onAppear {
             store.send(.onAppear)
         }

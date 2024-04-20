@@ -26,6 +26,8 @@ enum ArcadeBrand: Equatable {
             "timezone"
         case .leisureLand:
             "leisureland"
+        case .roundOne:
+            "roundone"
         default:
             nil
         }
