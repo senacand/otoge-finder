@@ -24,7 +24,7 @@ struct HomeScreen: View {
             ForEach(store.arcades, id: \.self) { arcade in
                 Marker(
                     arcade.name,
-                    systemImage: "gamecontroller.fill",
+                    systemImage: "mappin",
                     coordinate:
                         CLLocationCoordinate2D(
                             latitude: arcade.location.latitude,
@@ -34,44 +34,62 @@ struct HomeScreen: View {
                 .tag(arcade)
             }
         }
+        .animation(.snappy, value: store.mapCameraPosition)
+        .mapControls {
+            MapCompass()
+            MapUserLocationButton()
+        }
+        .onAppear {
+            store.send(.onAppear)
+        }
         .mapStyle(.standard(elevation: .realistic))
         .onMapCameraChange { context in
-            store.send(.mapRegionChanged(context.region))
-        }
-        .safeAreaInset(edge: .bottom) {
-            HStack {
-                Spacer()
-                
-                if store.isLoading {
-                    ProgressView()
-                        .padding(.top)
-                }
-                else {
-                    Button("Find Arcade Nearby", systemImage: "magnifyingglass") {
-                        store.send(.searchTapped)
-                    }
-                    .padding(.top)
-                }
-                
-                Spacer()
-            }
-            .background(.thinMaterial)
-            .background(ignoresSafeAreaEdges: .all)
+            store.send(.mapCameraUpdated(context))
         }
         .sheet(
             item:
                 $store.scope(
-                    state: \.arcadeDetailState,
-                    action: \.arcadeDetailAction
-                ),
-            onDismiss: {
-                store.send(.arcadeSelected(arcade: nil))
+                    state: \.searchState,
+                    action: \.searchAction
+                )
+        ) { searchStore in
+            NavigationStack {
+                SearchScreen(store: searchStore)
             }
-        ) { arcadeDetailStore in
-            ArcadeDetailScreen(store: arcadeDetailStore)
-                .presentationDetents([.height(350), .fraction(0.99)])
+            .presentationDetents([.height(100), .fraction(0.99)], selection: $store.searchDetent.sending(\.searchDetentUpdated))
+            .presentationDragIndicator(.visible)
+            .presentationBackgroundInteraction(.enabled)
+            .interactiveDismissDisabled()
+            .sheet(
+                item:
+                    $store.scope(
+                        state: \.searchResultState,
+                        action: \.searchResultAction
+                    )
+            ) { searchResultStore in
+                NavigationStack {
+                    SearchResultScreen(store: searchResultStore)
+                }
+                .presentationDetents([.height(200), .height(350), .fraction(0.99)])
                 .presentationDragIndicator(.automatic)
                 .presentationBackgroundInteraction(.enabled)
+                .interactiveDismissDisabled()
+                .sheet(
+                    item:
+                        $store.scope(
+                            state: \.arcadeDetailState,
+                            action: \.arcadeDetailAction
+                        )
+                ) { store in
+                    NavigationStack {
+                        ArcadeDetailScreen(store: store)
+                    }
+                    .presentationDetents([.height(350), .fraction(0.99)])
+                    .presentationDragIndicator(.automatic)
+                    .presentationBackgroundInteraction(.enabled)
+                    .interactiveDismissDisabled()
+                }
+            }
         }
     }
 }

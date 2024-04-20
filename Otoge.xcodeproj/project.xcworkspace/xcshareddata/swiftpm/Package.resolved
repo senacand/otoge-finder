@@ -1,5 +1,5 @@
 {
-  "originHash" : "cf7c05f3864b436e1454ef70334e2292ac3e8033c668ac3d77673ceee10c295e",
+  "originHash" : "19753e84d25180e64f7474aceba69a802349029ced599a03bda3cdc5c7d96572",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "composable-core-location",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/senacand/composable-core-location.git",
+      "state" : {
+        "branch" : "swift-concurrency",
+        "revision" : "40a98e18d0350fd1a1efa83c24aca3044b9b7bd2"
       }
     },
     {

@@ -19,6 +19,7 @@ enum Game: Equatable {
     case popNMusic
     case jubeat
     case soundVoltex
+    case reflecBeat
     case other(name: String)
 }
 
@@ -51,6 +52,8 @@ extension Game {
             return "Jubeat"
         case .soundVoltex:
             return "SoundVoltex"
+        case .reflecBeat:
+            return "Reflec Beat"
         case .other(let name):
             return name
         }

@@ -12,68 +12,86 @@ struct ArcadeDetailScreen: View {
     let store: StoreOf<ArcadeDetailFeature>
     
     var body: some View {
-        List {
-            titleSection
-                .listRowSeparator(.hidden)
-                .padding(.vertical, 4.0)
-            Section(header: Text("Game Cabinets")) {
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                titleSection
+                    .listRowSeparator(.hidden)
+                    .padding(.all)
+                    .padding(.top, 4.0)
                 gamesSection
+                    .padding(.horizontal)
+                    .padding(.vertical, 12.0)
+                    .background(.regularMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                    .padding(.horizontal)
             }
         }
-        .background(.regularMaterial)
-        .listStyle(.plain)
     }
 }
 
 extension ArcadeDetailScreen {
     private var titleSection: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading) {
+        VStack(alignment: .leading) {
+            HStack(alignment: .top) {
                 Text(store.arcade.name)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                
-                if let alternateName = store.arcade.alternateName,
-                    !alternateName.isEmpty
-                {
-                    Text(alternateName)
+                Spacer()
+                Button {
+                    guard let url = store.arcade.location.appleMapsUrl else {
+                        return
+                    }
+                    #if os(iOS)
+                    UIApplication.shared.open(url)
+                    #endif
+                } label: {
+                    Image(systemName: "map")
                         .fontWeight(.bold)
-                        .foregroundStyle(.secondary)
+                        .padding(.all, 8.0)
+                        .background(.quaternary)
+                        .foregroundStyle(.gray)
+                        .clipShape(Circle())
                 }
-                
-                Text(store.arcade.location.address)
-            }
-            Spacer()
-            Button {
-                guard let url = store.arcade.location.appleMapsUrl else {
-                    return
+                Button {
+                    store.send(.dismiss)
+                } label: {
+                    Image(systemName: "xmark")
+                        .fontWeight(.bold)
+                        .padding(.all, 8.0)
+                        .background(.quaternary)
+                        .foregroundStyle(.gray)
+                        .clipShape(Circle())
                 }
-                
-                UIApplication.shared.open(url)
-            } label: {
-                Image(systemName: "map")
-                    .fontWeight(.bold)
-                    .padding(.all, 8.0)
-                    .background(.quaternary)
-                    .foregroundStyle(.gray)
-                    .clipShape(Circle())
             }
-            Button {
-                store.send(.dismiss)
-            } label: {
-                Image(systemName: "xmark")
+                
+            if let alternateName = store.arcade.alternateName,
+                !alternateName.isEmpty
+            {
+                Text(alternateName)
                     .fontWeight(.bold)
-                    .padding(.all, 8.0)
-                    .background(.quaternary)
-                    .foregroundStyle(.gray)
-                    .clipShape(Circle())
+                    .foregroundStyle(.secondary)
+            }
+            
+            Text(
+                store.isAlternateAddress
+                ? store.arcade.location.alternateAddress ?? store.arcade.location.address
+                : store.arcade.location.address
+            )
+            .onTapGesture {
+                store.send(.toggleAlternateAddress)
             }
         }
+        .buttonStyle(PlainButtonStyle())
     }
     
     private var gamesSection: some View {
-        ForEach(store.arcade.games, id: \.self) { game in
-            ArcadeGameCell(game: game)
+        LazyVStack(alignment: .leading) {
+            ForEach(store.arcade.games, id: \.self) { game in
+                ArcadeGameCell(game: game)
+                if game != store.arcade.games.last {
+                    Divider()
+                }
+            }
         }
     }
 }
@@ -88,8 +106,8 @@ extension ArcadeDetailScreen {
                     location: Location(
                         latitude: 0,
                         longitude: 0,
-                        address: "Address",
-                        alternateAddress: "Address"
+                        address: "所のアドレッス",
+                        alternateAddress: "Alternate Address"
                     ),
                     games: [
                         .maimaiDx, 

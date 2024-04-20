@@ -94,8 +94,15 @@ private extension Game {
             self = .soundVoltex
         case "POLARIS_CHORD":
             self = .polarisChord
+        case "REFLEC_BEAT":
+            self = .reflecBeat
         default:
-            self = .other(name: cabinet.game)
+            self = .other(
+                name: cabinet
+                    .game
+                    .replacingOccurrences(of: "_", with: " ")
+                    .capitalized
+            )
         }
     }
 }
