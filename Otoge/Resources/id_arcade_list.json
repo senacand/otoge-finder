@@ -1,0 +1,294 @@
+[
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Cow Play Cow moo Carstensz mall",
+        "address": "Jalan jend sudirman no1. Cihuni. Kec pagedangan",
+        "lat": -6.2697615,
+        "lng": 106.6304198,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            },
+            {
+                "game": "CHUNITHM_NEW_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "19045"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone Centre Point",
+        "address": "Centre Point Medan 3rd Floor, Jl.Jawa No.8,Gg. Buntu, Kec. Medan",
+        "lat": 3.5916749,
+        "lng": 98.6810665,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18895"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone Jambi",
+        "address": "No.88,Simpang IV Sipin,Kec.Telanaipura,Kota Jambi,Jambi36125",
+        "lat": -1.612739,
+        "lng": 103.5755084,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18944"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone Kelapa Gading 3 Lt 3",
+        "address": "Jl.Boulevard Raya,RT13/18,Klp.Gading Tim,Kota Jakarta Utara,DKI",
+        "lat": -6.157455,
+        "lng": 106.9070746,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18892"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone La Piazza",
+        "address": "Klp. Gading, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
+        "lat": -6.1588448,
+        "lng": 106.8945456,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18945"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone Level 21",
+        "address": "Level 21 Mall Lt. 1, Jl. Teuku Umar No. 1 Denpasar",
+        "lat": -8.6696985,
+        "lng": 115.2150664,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18893"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone Paris Van Java",
+        "address": "No131-139 Cipedes,Kec.Sukajadi Kota Bandung,JawaBarat 40162",
+        "lat": -6.8844395,
+        "lng": 107.5908826,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18948"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "Timezone Summarecon Bandung",
+        "address": "Summarecon Bandung,Kec. Gedebage, Kota Bandung, Jawa Barat 40295",
+        "lat": -6.9594492,
+        "lng": 107.6946987,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "18894"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(GALAXY MALL)",
+        "address": "GALAXYMAL LT.3NO.302-303,JL.DINDAHTIMURNO.37MULYOREJOSURABAYA",
+        "lat": -7.275592,
+        "lng": 112.782234,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "21071"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(KELAPA GADING MALL3)",
+        "address": "KELAPAGADINGML3L2No.ENTERTAINMENTJLBULEVAR.BLOK.M,PERMAI-14240",
+        "lat": -6.156673,
+        "lng": 106.909268,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "20736"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(LIPPO MALL PURI)",
+        "address": "LIPPO ML PURI,UNIT L1-07KEL KEMBANGAN SELATAN CBD PURI INDAH JKT",
+        "lat": -6.190158,
+        "lng": 106.738733,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "20734"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(MARGO CITY MALL)",
+        "address": "MARGO CITY PLASA , JL. MARGONDARAYA NO 358 - DEPOK 16423",
+        "lat": -6.3730937,
+        "lng": 106.8347512,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "21301"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(PLUIT EMPORIUM)",
+        "address": "EMPORIUM PLUIT MAL(KAWASAN CBD)LT.4,PLUIT S.RAYA,JAKARTA UTARA",
+        "lat": -6.127580884337185,
+        "lng": 106.79076082065433,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "21073"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(PLUIT VILLAGE LT.4)",
+        "address": "Pluit Village Lt. 4,Jl. Pluit Indah Raya,Jakarta - Utara",
+        "lat": -6.1164684,
+        "lng": 106.789632,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "20378"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(SUMMARECON BEKASI)",
+        "address": "SUMARECONMAL BEKASI.JL.BOULEVARDAHMAD YANI BLOKM-BEKASI-17142",
+        "lat": -6.226200084486441,
+        "lng": 107.00093653599856,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "21072"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(SUMMARECON SERPONG)",
+        "address": "SUMARECON MAL SERPONG LT 2.JL.BOULEVARD CENTRA GADING SERPONG",
+        "lat": -6.241002,
+        "lng": 106.628151,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "20735"
+        }
+    },
+    {
+        "country": "ID",
+        "area": "Indonesia",
+        "storeName": "TIMEZONE(SUPERMALL KARAWACI)",
+        "address": "L.S.KARAWACI LT.DASAR,105BULEVAR00-00LIPPO KARAWACI1200TANGERANG",
+        "lat": -6.2270749408806445,
+        "lng": 106.60704502593387,
+        "cabinets": [
+            {
+                "game": "MAIMAI_DX_INTERNATIONAL"
+            }
+        ],
+        "context": {
+            "allNetCt": "1007",
+            "allNetSid": "21074"
+        }
+    }
+]

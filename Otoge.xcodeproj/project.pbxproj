@@ -40,6 +40,8 @@
 		A6A5BB412BD445B2002B6970 /* jp_arcade_list.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A5BB402BD44596002B6970 /* jp_arcade_list.json */; };
 		A6A5BB432BD445FB002B6970 /* LocalArcadeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */; };
 		A6A5BB472BD46378002B6970 /* MKLocalSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB462BD46378002B6970 /* MKLocalSearchRepository.swift */; };
+		A6A5BB492BD66DA6002B6970 /* id_arcade_list.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A5BB482BD66DA6002B6970 /* id_arcade_list.json */; };
+		A6A5BB4C2BD67114002B6970 /* Arcade+OtogeAppMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5BB4B2BD67114002B6970 /* Arcade+OtogeAppMapping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		A6A5BB402BD44596002B6970 /* jp_arcade_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = jp_arcade_list.json; path = Otoge/Resources/jp_arcade_list.json; sourceTree = SOURCE_ROOT; };
 		A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalArcadeRepository.swift; path = Otoge/Repositories/Arcade/LocalArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB462BD46378002B6970 /* MKLocalSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKLocalSearchRepository.swift; path = Otoge/Repositories/LocalSearch/MKLocalSearchRepository.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB482BD66DA6002B6970 /* id_arcade_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = id_arcade_list.json; sourceTree = "<group>"; };
+		A6A5BB4B2BD67114002B6970 /* Arcade+OtogeAppMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Arcade+OtogeAppMapping.swift"; path = "Otoge/Repositories/Arcade/Extensions/Arcade+OtogeAppMapping.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 		A62E8F212BD293B800B9DCE1 /* Arcade */ = {
 			isa = PBXGroup;
 			children = (
+				A6A5BB4A2BD6710A002B6970 /* Extensions */,
 				A62E8F242BD2961300B9DCE1 /* Models */,
 				A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */,
 				A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */,
@@ -306,8 +311,17 @@
 				A67CD0C52BD28432009E4C8E /* Assets.xcassets */,
 				A6A5BB3E2BD43877002B6970 /* Nabla.ttf */,
 				A6A5BB402BD44596002B6970 /* jp_arcade_list.json */,
+				A6A5BB482BD66DA6002B6970 /* id_arcade_list.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6A5BB4A2BD6710A002B6970 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A6A5BB4B2BD67114002B6970 /* Arcade+OtogeAppMapping.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A5BB3F2BD43877002B6970 /* Nabla.ttf in Resources */,
+				A6A5BB492BD66DA6002B6970 /* id_arcade_list.json in Resources */,
 				A6A5BB412BD445B2002B6970 /* jp_arcade_list.json in Resources */,
 				A67CD0CA2BD28432009E4C8E /* Preview Assets.xcassets in Resources */,
 				A67CD0C62BD28432009E4C8E /* Assets.xcassets in Resources */,
@@ -457,6 +472,7 @@
 				A62E8F132BD288DA00B9DCE1 /* MainApp.swift in Sources */,
 				A6A5BB2B2BD2F933002B6970 /* SearchScreen.swift in Sources */,
 				A62E8F2A2BD2978C00B9DCE1 /* ArcadeBrand.swift in Sources */,
+				A6A5BB4C2BD67114002B6970 /* Arcade+OtogeAppMapping.swift in Sources */,
 				A6A5BB1D2BD2B68B002B6970 /* ArcadeDetailScreen.swift in Sources */,
 				A62E8F1B2BD291CE00B9DCE1 /* Game.swift in Sources */,
 				A62E8F262BD296B300B9DCE1 /* OtogeArcade.swift in Sources */,

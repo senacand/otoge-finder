@@ -35,7 +35,13 @@ struct ArcadeCell: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                     
-                    let gameImages = arcade.games.compactMap(\.imageString)
+                    let gameImages = arcade
+                        .games
+                        .filter {
+                            // If SDVX Valkyrie exists, just show Valkyrie
+                            !($0 == .soundVoltex && arcade.games.contains(.soundVoltexValkyrie))
+                        }
+                        .compactMap(\.imageString)
                     
                     if !gameImages.isEmpty {
                         ScrollView(.horizontal) {

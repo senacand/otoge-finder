@@ -7,8 +7,10 @@
 
 enum Game: Equatable {
     case maimaiDx
+    case maimaiDxInternational
     case beatmaniaIidx
     case chunithm
+    case chunithmInternational
     case danceDanceRevolution
     case danceRushStardom
     case gitadoraDrumMania
@@ -19,6 +21,7 @@ enum Game: Equatable {
     case popNMusic
     case jubeat
     case soundVoltex
+    case soundVoltexValkyrie
     case reflecBeat
     case other(name: String)
 }
@@ -28,10 +31,14 @@ extension Game {
         switch self {
         case .maimaiDx:
             return "maimai DX"
+        case .maimaiDxInternational:
+            return "maimai DX (International)"
         case .beatmaniaIidx:
             return "beatmania IIDX"
         case .chunithm:
             return "Chunithm"
+        case .chunithmInternational:
+            return "Chunithm (International)"
         case .danceDanceRevolution:
             return "DanceDanceRevolution"
         case .danceRushStardom:
@@ -51,7 +58,9 @@ extension Game {
         case .jubeat:
             return "Jubeat"
         case .soundVoltex:
-            return "SoundVoltex"
+            return "Sound Voltex"
+        case .soundVoltexValkyrie:
+            return "Sound Voltex (Valkyrie)"
         case .reflecBeat:
             return "Reflec Beat"
         case .other(let name):
@@ -61,15 +70,15 @@ extension Game {
     
     var imageString: String? {
         switch self {
-        case .maimaiDx:
+        case .maimaiDx, .maimaiDxInternational:
             "maimai"
-        case .chunithm:
+        case .chunithm, .chunithmInternational:
             "chunithm"
         case .ongeki:
             "ongeki"
         case .projectDiva:
             "project_diva"
-        case .soundVoltex:
+        case .soundVoltex, .soundVoltexValkyrie:
             "sdvx"
         case .polarisChord:
             "polarischord"
@@ -94,13 +103,13 @@ extension Game {
     
     var priority: Int {
         switch self {
-        case .maimaiDx:
+        case .maimaiDx, .maimaiDxInternational:
             0
         case .ongeki:
             1
-        case .chunithm:
+        case .chunithm, .chunithmInternational:
             2
-        case .soundVoltex:
+        case .soundVoltex, .soundVoltexValkyrie:
             3
         case .beatmaniaIidx:
             4

@@ -103,9 +103,18 @@ extension ArcadeDetailScreen {
         .buttonStyle(PlainButtonStyle())
     }
     
+    @ViewBuilder
     private var gamesSection: some View {
         VStack(alignment: .leading) {
-            ForEach(store.arcade.games, id: \.self) { game in
+            let games = store
+                .arcade
+                .games
+                .filter {
+                    // If SDVX Valkyrie exists, just show Valkyrie
+                    !($0 == .soundVoltex && store.arcade.games.contains(.soundVoltexValkyrie))
+                }
+            
+            ForEach(games, id: \.self) { game in
                 ArcadeGameCell(game: game)
                 if game != store.arcade.games.last {
                     Divider()
