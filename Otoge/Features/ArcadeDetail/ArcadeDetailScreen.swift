@@ -94,7 +94,7 @@ extension ArcadeDetailScreen {
             
             Text(
                 store.isAlternateAddress
-                ? store.arcade.location.alternateAddress ?? store.arcade.location.address
+                ? store.arcade.location.alternateAddress?.capitalized ?? store.arcade.location.address
                 : store.arcade.location.address
             )
             .onTapGesture {
