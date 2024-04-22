@@ -5,6 +5,8 @@
 //  Created by Sen on 2024/4/19.
 //
 
+import Foundation
+
 enum Game: Equatable {
     case maimaiDx
     case maimaiDxInternational
@@ -65,6 +67,47 @@ extension Game {
             return "Reflec Beat"
         case .other(let name):
             return name
+        }
+    }
+    
+    var url: URL? {
+        switch self {
+        case .maimaiDx:
+            return URL(string: "https://maimai.sega.jp/")
+        case .maimaiDxInternational:
+            return URL(string: "https://maimai.sega.com/")
+        case .beatmaniaIidx:
+            return URL(string: "https://p.eagate.573.jp/game/2dx/")
+        case .chunithm:
+            return URL(string: "https://chunithm.sega.jp/")
+        case .chunithmInternational:
+            return URL(string: "https://chunithm.sega.com/")
+        case .danceDanceRevolution:
+            return URL(string: "https://p.eagate.573.jp/game/ddr/")
+        case .danceRushStardom:
+            return URL(string: "https://p.eagate.573.jp/game/dan/")
+        case .gitadoraDrumMania:
+            return URL(string: "https://p.eagate.573.jp/game/gfdm/")
+        case .gitadoraGuitarFreaks:
+            return URL(string: "https://p.eagate.573.jp/game/gfdm/")
+        case .projectDiva:
+            return URL(string: "http://miku.sega.jp/arcade/")
+        case .ongeki:
+            return URL(string: "https://ongeki.sega.jp/")
+        case .polarisChord:
+            return URL(string: "https://p.eagate.573.jp/game/polarischord/")
+        case .popNMusic:
+            return URL(string: "https://p.eagate.573.jp/game/popn/")
+        case .jubeat:
+            return URL(string: "https://p.eagate.573.jp/game/jubeat/")
+        case .soundVoltex:
+            return URL(string: "https://p.eagate.573.jp/game/sdvx/")
+        case .soundVoltexValkyrie:
+            return URL(string: "https://p.eagate.573.jp/game/sdvx/")
+        case .reflecBeat:
+            return URL(string: "https://p.eagate.573.jp/game/reflec")
+        case .other:
+            return nil
         }
     }
     

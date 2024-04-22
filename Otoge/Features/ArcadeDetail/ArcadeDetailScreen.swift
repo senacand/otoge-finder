@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ArcadeDetailScreen: View {
     @Bindable var store: StoreOf<ArcadeDetailFeature>
+    @Environment(\.openURL) private var openURL
     
     var body: some View {
         ScrollView {
@@ -42,7 +43,7 @@ struct ArcadeDetailScreen: View {
                 guard let url = store.arcade.location.googleMapsUrl else {
                     return
                 }
-                UIApplication.shared.open(url)
+                openURL(url)
             }
             
             Button("Cancel", role: .cancel) {

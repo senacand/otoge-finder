@@ -8,27 +8,39 @@
 import SwiftUI
 
 struct ArcadeGameCell: View {
+    @Environment(\.openURL) private var openURL
+    
     let game: Game
     
     var body: some View {
-        HStack {
-            if let imageString = game.imageString {
-                Image(uiImage: UIImage(named: imageString)!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 32, height: 32)
+        Button {
+            guard let url = game.url else {
+                return
             }
-            else {
-                Image(systemName: "gamecontroller.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 32, height: 32)
-            }
-            
-            Text(game.name)
-            Spacer()
+            openURL(url)
         }
-        .padding(.vertical, 4.0)
+        label: {
+            HStack {
+                if let imageString = game.imageString {
+                    Image(uiImage: UIImage(named: imageString)!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 32, height: 32)
+                }
+                else {
+                    Image(systemName: "gamecontroller.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 32, height: 32)
+                }
+                
+                Text(game.name)
+                Spacer()
+            }
+            .contentShape(Rectangle())
+            .padding(.vertical, 4.0)
+        }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
