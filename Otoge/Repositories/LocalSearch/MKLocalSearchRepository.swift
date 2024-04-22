@@ -16,13 +16,11 @@ final class MKLocalSearchRepository: NSObject, LocalSearchRepositoryProtocol {
         
         return completer
     }()
-    private var onCompleterUpdateResults: (([MKLocalSearchCompletion]) -> Void)?
     
+    private var _completerResultsCont: AsyncStream<[MKLocalSearchCompletion]>.Continuation?
     private(set) lazy var completerResults: AsyncStream<[MKLocalSearchCompletion]> = {
         AsyncStream { [weak self] continuation in
-            self?.onCompleterUpdateResults = { results in
-                continuation.yield(results)
-            }
+            self?._completerResultsCont = continuation
         }
     }()
     
@@ -53,6 +51,6 @@ final class MKLocalSearchRepository: NSObject, LocalSearchRepositoryProtocol {
 
 extension MKLocalSearchRepository: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-        onCompleterUpdateResults?(completer.results)
+        _completerResultsCont?.yield(completer.results)
     }
 }

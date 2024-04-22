@@ -67,7 +67,7 @@
 		A62E8F182BD290CA00B9DCE1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Otoge/Entities/Location.swift; sourceTree = SOURCE_ROOT; };
 		A62E8F1A2BD291CE00B9DCE1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Otoge/Entities/Game.swift; sourceTree = SOURCE_ROOT; };
 		A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeRepository.swift; path = otoge/Repositories/Arcade/ArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
-		A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeAppArcadeRepository.swift; path = Otoge/Repositories/Arcade/OtogeAppArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
+		A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeAppArcadeRepository.swift; path = otoge/Repositories/Arcade/OtogeAppArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
 		A62E8F252BD296B300B9DCE1 /* OtogeArcade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeArcade.swift; path = Otoge/Repositories/Arcade/Models/OtogeArcade.swift; sourceTree = SOURCE_ROOT; };
 		A62E8F272BD2975600B9DCE1 /* OtogeCabinet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtogeCabinet.swift; path = Otoge/Repositories/Arcade/Models/OtogeCabinet.swift; sourceTree = SOURCE_ROOT; };
 		A62E8F292BD2978C00B9DCE1 /* ArcadeBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeBrand.swift; path = Otoge/Entities/ArcadeBrand.swift; sourceTree = SOURCE_ROOT; };
@@ -95,8 +95,8 @@
 		A6A5BB392BD3B997002B6970 /* ArcadeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArcadeCell.swift; path = Otoge/Features/SearchResult/Views/ArcadeCell.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB3E2BD43877002B6970 /* Nabla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nabla.ttf; sourceTree = "<group>"; };
 		A6A5BB402BD44596002B6970 /* jp_arcade_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = jp_arcade_list.json; path = Otoge/Resources/jp_arcade_list.json; sourceTree = SOURCE_ROOT; };
-		A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalArcadeRepository.swift; path = Otoge/Repositories/Arcade/LocalArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
-		A6A5BB462BD46378002B6970 /* MKLocalSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKLocalSearchRepository.swift; path = Otoge/Repositories/LocalSearch/MKLocalSearchRepository.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalArcadeRepository.swift; path = otoge/Repositories/Arcade/LocalArcadeRepository.swift; sourceTree = SOURCE_ROOT; };
+		A6A5BB462BD46378002B6970 /* MKLocalSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKLocalSearchRepository.swift; path = otoge/Repositories/LocalSearch/MKLocalSearchRepository.swift; sourceTree = SOURCE_ROOT; };
 		A6A5BB482BD66DA6002B6970 /* id_arcade_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = id_arcade_list.json; sourceTree = "<group>"; };
 		A6A5BB4B2BD67114002B6970 /* Arcade+OtogeAppMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Arcade+OtogeAppMapping.swift"; path = "Otoge/Repositories/Arcade/Extensions/Arcade+OtogeAppMapping.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -155,8 +155,8 @@
 				A6A5BB4A2BD6710A002B6970 /* Extensions */,
 				A62E8F242BD2961300B9DCE1 /* Models */,
 				A62E8F1F2BD2935900B9DCE1 /* ArcadeRepository.swift */,
-				A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */,
 				A6A5BB422BD445FB002B6970 /* LocalArcadeRepository.swift */,
+				A62E8F222BD293C900B9DCE1 /* OtogeAppArcadeRepository.swift */,
 			);
 			path = Arcade;
 			sourceTree = "<group>";
