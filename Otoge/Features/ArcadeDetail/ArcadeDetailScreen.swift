@@ -101,7 +101,7 @@ extension ArcadeDetailScreen {
                 store.send(.toggleAlternateAddress)
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(.plain)
     }
     
     @ViewBuilder

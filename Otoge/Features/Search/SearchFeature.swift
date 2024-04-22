@@ -25,6 +25,10 @@ struct SearchFeature {
             isTextFieldFocused || !searchText.isEmpty
         }
         
+        var isClearTextFieldButtonShown: Bool {
+            !searchText.isEmpty
+        }
+        
         var isMapsInCurrentLocation: Bool = true
     }
     
@@ -36,6 +40,7 @@ struct SearchFeature {
         case textFieldFocusChanged(Bool)
         case searchCompleterResponse([MKLocalSearchCompletion])
         case searchCompletionTapped(MKLocalSearchCompletion)
+        case clearTextFieldTapped
         
         case expandDetent
         case collapseDetent
@@ -88,6 +93,11 @@ struct SearchFeature {
                     }
                     
                     await send(.goToMapItem(mapItem))
+                }
+                
+            case .clearTextFieldTapped:
+                return .run { send in
+                    await send(.searchTextChanged(""))
                 }
                 
             case .currentLocationTapped,

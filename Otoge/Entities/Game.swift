@@ -42,9 +42,9 @@ extension Game {
         case .chunithmInternational:
             return "Chunithm (International)"
         case .danceDanceRevolution:
-            return "DanceDanceRevolution"
+            return "Dance Dance Revolution"
         case .danceRushStardom:
-            return "DanceRush Stardom"
+            return "Dance Rush Stardom"
         case .gitadoraDrumMania:
             return "Gitadora Drum Mania"
         case .gitadoraGuitarFreaks:

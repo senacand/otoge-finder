@@ -15,7 +15,7 @@ struct SearchScreen: View {
     var body: some View {
         VStack(alignment: .center) {
             searchInput
-                .padding(.top, 24)
+                .padding(.top, 18)
                 .padding(.horizontal)
             
             if !store.isLoading {
@@ -84,7 +84,8 @@ struct SearchScreen: View {
         HStack {
             HStack {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.gray)
+                    .opacity(0.5)
                 TextField(
                     "Search somewhere else",
                     text: $store.searchText.sending(\.searchTextChanged)
@@ -93,10 +94,24 @@ struct SearchScreen: View {
                 .onSubmit {
                     store.send(.textFieldFocusChanged(false))
                 }
-                .bind($store.isTextFieldFocused.sending(\.textFieldFocusChanged), to: $searchTextFieldFocus)
+                .bind(
+                    $store
+                        .isTextFieldFocused
+                        .sending(\.textFieldFocusChanged),
+                    to: $searchTextFieldFocus
+                )
+                if store.isClearTextFieldButtonShown {
+                    Button {
+                        store.send(.clearTextFieldTapped)
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.gray)
+                    }
+                    .buttonStyle(.plain)
+                }
             }
             .padding(.all, 8.0)
-            .background(.regularMaterial)
+            .background(.quinary)
             .clipShape(RoundedRectangle(cornerRadius: 8.0))
             
             if store.isCancelButtonShown {
