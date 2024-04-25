@@ -22,8 +22,6 @@ struct HomeScreen: View {
         {
             GeometryReader { geometry in
                 ZStack(alignment: .bottomLeading) {
-                    let isPortrait = UIScreen.main.bounds.width < UIScreen.main.bounds.height
-                    
                     mapView
                         .onMapCameraChange(frequency: .continuous) {
                             mapTapped = true
