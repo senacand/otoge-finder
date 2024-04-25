@@ -32,3 +32,5 @@ targets:
         TARGETED_DEVICE_FAMILY: 1
     preBuildScripts:
       - script: "${PROJECT_DIR}/swiftgen/bin/swiftgen config run"
+        name: SwiftGen
+        basedOnDependencyAnalysis: NO
