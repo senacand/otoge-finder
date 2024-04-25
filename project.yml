@@ -1,6 +1,6 @@
 name: Otoge
 options:
-  bundleIdPrefix: com.senacand
+  bundleIdPrefix: dev.sena
 packages:
   Alamofire:
     url: https://github.com/Alamofire/Alamofire
@@ -25,6 +25,8 @@ targets:
     settings:
       base:
         GENERATE_INFOPLIST_FILE: NO
-        MARKETING_VERSION: 1.0.0
-        PRODUCT_BUNDLE_IDENTIFIER: com.senacand.otoge
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 0.1.0.1
+        PRODUCT_BUNDLE_IDENTIFIER: dev.sena.otoge
         APP_NAME: Otoge Finder
+        TARGETED_DEVICE_FAMILY: 1

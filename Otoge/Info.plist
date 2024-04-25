@@ -23,5 +23,15 @@
 		<key>UIImageName</key>
 		<string></string>
 	</dict>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>UISupportedInterfaceOrientations~iphone</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
 </dict>
 </plist>
