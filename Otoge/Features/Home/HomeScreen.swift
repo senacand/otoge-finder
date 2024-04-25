@@ -20,86 +20,94 @@ struct HomeScreen: View {
             || UIDevice.current.userInterfaceIdiom == .mac
             || UIDevice.current.userInterfaceIdiom == .vision
         {
-            GeometryReader { geometry in
-                ZStack(alignment: .bottomLeading) {
-                    mapView
-                        .onMapCameraChange(frequency: .continuous) {
-                            mapTapped = true
-                        }
-                        .onMapCameraChange(frequency: .onEnd) {
-                            mapTapped = false
-                        }
-                    ZStack {
-                        if let store = $store.scope(
-                            state: \.arcadeDetailState,
-                            action: \.arcadeDetailAction
-                        ).wrappedValue
-                        {
-                            ArcadeDetailScreen(
-                                store: store
-                            )
-                            .transition(
-                                .move(edge: .bottom)
-                            )
-                        }
-                        
-                        else if let store = $store.scope(
-                            state: \.searchResultState,
-                            action: \.searchResultAction
-                        ).wrappedValue
-                        {
-                            SearchResultScreen(
-                                store: store
-                            )
-                            .transition(
-                                .move(edge: .bottom)
-                            )
-                        }
-                        
-                        else if let store = $store.scope(
-                            state: \.searchState,
-                            action: \.searchAction
-                        ).wrappedValue
-                        {
-                            VStack {
-                                Text("OTOGE")
-                                    .font(Font.custom("Nabla", size: 48.0))
-                                    .padding(.bottom, -18)
-                                SearchScreen(
-                                    store: store
-                                )
-                            }
-                            .transition(
-                                .move(edge: .bottom)
-                            )
-                        }
-                    }
-                    .padding(.all, 4.0)
-                    .background(.thinMaterial)
-                    .frame(
-                        width: 360,
-                        height: 460
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 24.0))
-                    .padding(.leading, 16.0)
-                    .opacity(mapTapped ? 0.3 : 1.0)
-                    .animation(
-                        .smooth,
-                        value: mapTapped
-                    )
-                    .animation(.smooth, value: store.searchResultState)
-                    .animation(.smooth, value: store.arcadeDetailState)
-                }
-            }
+            iPadLayout
         }
         else {
-            mapView
-                .searchSheet(homeStore: $store)
+            iPhoneLayout
         }
     }
 }
 
 private extension HomeScreen {
+    var iPhoneLayout: some View {
+        mapView
+            .searchSheet(homeStore: $store)
+    }
+    
+    var iPadLayout: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .bottomLeading) {
+                mapView
+                .onMapCameraChange(frequency: .continuous) {
+                    mapTapped = true
+                }
+                .onMapCameraChange(frequency: .onEnd) {
+                    mapTapped = false
+                }
+                ZStack {
+                    if let store = $store.scope(
+                        state: \.arcadeDetailState,
+                        action: \.arcadeDetailAction
+                    ).wrappedValue
+                    {
+                        ArcadeDetailScreen(
+                            store: store
+                        )
+                        .transition(
+                            .move(edge: .bottom)
+                        )
+                    }
+                    
+                    else if let store = $store.scope(
+                        state: \.searchResultState,
+                        action: \.searchResultAction
+                    ).wrappedValue
+                    {
+                        SearchResultScreen(
+                            store: store
+                        )
+                        .transition(
+                            .move(edge: .bottom)
+                        )
+                    }
+                    
+                    else if let store = $store.scope(
+                        state: \.searchState,
+                        action: \.searchAction
+                    ).wrappedValue
+                    {
+                        VStack {
+                            Text("OTOGE")
+                                .font(Font.custom("Nabla", size: 48.0))
+                                .padding(.bottom, -18)
+                            SearchScreen(
+                                store: store
+                            )
+                        }
+                        .transition(
+                            .move(edge: .bottom)
+                        )
+                    }
+                }
+                .padding(.all, 4.0)
+                .background(.thinMaterial)
+                .frame(
+                    width: 360,
+                    height: 460
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 24.0))
+                .padding(.leading, 16.0)
+                .opacity(mapTapped ? 0.3 : 1.0)
+                .animation(
+                    .smooth,
+                    value: mapTapped
+                )
+                .animation(.smooth, value: store.searchResultState)
+                .animation(.smooth, value: store.arcadeDetailState)
+            }
+        }
+    }
+    
     var mapView: some View {
         Map(
             position: $store
