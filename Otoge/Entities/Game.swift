@@ -111,34 +111,34 @@ extension Game {
         }
     }
     
-    var imageString: String? {
+    var image: ImageAsset? {
         switch self {
         case .maimaiDx, .maimaiDxInternational:
-            "maimai"
+            Asset.maimai
         case .chunithm, .chunithmInternational:
-            "chunithm"
+            Asset.chunithm
         case .ongeki:
-            "ongeki"
+            Asset.ongeki
         case .projectDiva:
-            "project_diva"
+            Asset.projectDiva
         case .soundVoltex, .soundVoltexValkyrie:
-            "sdvx"
+            Asset.sdvx
         case .polarisChord:
-            "polarischord"
+            Asset.polarischord
         case .beatmaniaIidx:
-            "iidx"
+            Asset.iidx
         case .danceDanceRevolution:
-            "ddr"
+            Asset.ddr
         case .gitadoraDrumMania, .gitadoraGuitarFreaks:
-            "gitadora"
+            Asset.gitadora
         case .popNMusic:
-            "popnmusic"
+            Asset.popnmusic
         case .danceRushStardom:
-            "drs"
+            Asset.drs
         case .reflecBeat:
-            "reflecbeat"
+            Asset.reflecbeat
         case .jubeat:
-            "jubeat"
+            Asset.jubeat
         case .other:
             nil
         }

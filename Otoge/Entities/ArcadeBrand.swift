@@ -5,6 +5,8 @@
 //  Created by Sen on 2024/4/19.
 //
 
+import SwiftUI
+
 enum ArcadeBrand: Equatable {
     case gigo
     case taito
@@ -17,28 +19,28 @@ enum ArcadeBrand: Equatable {
     case asoviba
     case cowPlayCowMoo
     
-    var imageString: String? {
+    var image: ImageAsset {
         switch self {
         case .gigo:
-            "gigo"
+            Asset.gigo
         case .taito:
-            "taito"
+            Asset.taito
         case .gamePanic:
-            "gamepanic"
+            Asset.gamepanic
         case .namco:
-            "namco"
+            Asset.namco
         case .timezone:
-            "timezone"
+            Asset.timezone
         case .leisureLand:
-            "leisureland"
+            Asset.leisureland
         case .roundOne:
-            "roundone"
+            Asset.roundone
         case .joypolis:
-            "joypolis"
+            Asset.joypolis
         case .asoviba:
-            "asoviba"
+            Asset.asoviba
         case .cowPlayCowMoo:
-            "cpcm"
+            Asset.cpcm
         }
     }
 }

@@ -15,16 +15,7 @@ struct HomeScreen: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             mapView
-//            HStack(spacing: 12.0) {
-//                ProgressView()
-//                Text("Updating arcade list")
-//                Spacer()
-//            }
-//            .padding(.all)
-//            .frame(maxWidth: .infinity)
-//            .background(.thickMaterial)
-//            .clipShape(RoundedRectangle(cornerRadius: 16.0))
-//            .padding(.all)
+            .searchSheet(homeStore: $store)
         }
     }
 }
@@ -49,43 +40,10 @@ private extension HomeScreen {
             }
             
             ForEach(store.arcades, id: \.self) { arcade in
-                if let brandImage = arcade.brand?.imageString {
-                    Annotation(
-                        arcade.name,
-                        coordinate:
-                            .init(
-                                latitude: arcade.location.latitude,
-                                longitude: arcade.location.longitude
-                            ),
-                        anchor: .center
-                    ) {
-                        Image(brandImage, bundle: nil)
-                            .resizable()
-                            .frame(
-                                width:
-                                    store.selectedArcade == arcade
-                                    ? 42 : 32,
-                                height:
-                                    store.selectedArcade == arcade
-                                    ? 42 : 32
-                            )
-                            .clipShape(RoundedRectangle(cornerRadius: 8.0))
-                            .animation(.bouncy, value: store.selectedArcade)
-                    }
-                    .tag(arcade)
-                }
-                else {
-                    Marker(
-                        arcade.name,
-                        systemImage: "mappin",
-                        coordinate:
-                                .init(
-                                    latitude: arcade.location.latitude,
-                                    longitude: arcade.location.longitude
-                                )
-                    )
-                    .tag(arcade)
-                }
+                ArcadeAnnotation(
+                    arcade: arcade,
+                    isSelected: arcade == store.selectedArcade
+                )
             }
         }
         .animation(.snappy, value: store.mapCameraPosition)
@@ -101,51 +59,6 @@ private extension HomeScreen {
         .onMapCameraChange { context in
             store.send(.mapCameraUpdated(context))
         }
-        .sheet(
-            item:
-                $store.scope(
-                    state: \.searchState,
-                    action: \.searchAction
-                )
-        ) { searchStore in
-            NavigationStack {
-                SearchScreen(store: searchStore)
-            }
-            .presentationDetents([.height(120), .fraction(0.99)], selection: $store.searchDetent.sending(\.searchDetentUpdated))
-            .presentationDragIndicator(.visible)
-            .presentationBackgroundInteraction(.enabled)
-            .interactiveDismissDisabled()
-            .sheet(
-                item:
-                    $store.scope(
-                        state: \.searchResultState,
-                        action: \.searchResultAction
-                    )
-            ) { searchResultStore in
-                NavigationStack {
-                    SearchResultScreen(store: searchResultStore)
-                }
-                .presentationDetents([.height(200), .height(350), .fraction(0.99)])
-                .presentationDragIndicator(.automatic)
-                .presentationBackgroundInteraction(.enabled)
-                .interactiveDismissDisabled()
-                .sheet(
-                    item:
-                        $store.scope(
-                            state: \.arcadeDetailState,
-                            action: \.arcadeDetailAction
-                        )
-                ) { store in
-                    NavigationStack {
-                        ArcadeDetailScreen(store: store)
-                    }
-                    .presentationDetents([.height(250), .fraction(0.99)])
-                    .presentationDragIndicator(.automatic)
-                    .presentationBackgroundInteraction(.enabled)
-                    .interactiveDismissDisabled()
-                }
-            }
-        }
     }
 }
 
@@ -156,5 +69,76 @@ private extension HomeScreen {
                 HomeFeature()
             }
     )
+}
+
+private extension View {
+    func arcadeDetailSheet(
+        homeStore: Bindable<StoreOf<HomeFeature>>
+    ) -> some View {
+        let sheet = self.sheet(
+            item: homeStore.scope(
+                state: \.arcadeDetailState,
+                action: \.arcadeDetailAction
+            )
+        ) { store in
+            NavigationStack {
+                ArcadeDetailScreen(store: store)
+            }
+            .presentationDetents([.height(250), .fraction(0.99)])
+            .presentationDragIndicator(.automatic)
+            .presentationBackgroundInteraction(.enabled)
+            .interactiveDismissDisabled()
+        }
+        
+        return sheet
+    }
+    
+    func searchResultSheet(
+        homeStore: Bindable<StoreOf<HomeFeature>>
+    ) -> some View {
+        let sheet = self.sheet(
+            item:
+                homeStore.scope(
+                    state: \.searchResultState,
+                    action: \.searchResultAction
+                )
+        ) { searchResultStore in
+            NavigationStack {
+                SearchResultScreen(store: searchResultStore)
+            }
+            .presentationDetents([.height(200), .height(350), .fraction(0.99)])
+            .presentationDragIndicator(.automatic)
+            .presentationBackgroundInteraction(.enabled)
+            .interactiveDismissDisabled()
+            .arcadeDetailSheet(
+                homeStore: homeStore
+            )
+        }
+        
+        return sheet
+    }
+    
+    func searchSheet(
+        homeStore: Bindable<StoreOf<HomeFeature>>
+    ) -> some View {
+        let sheet = self.sheet(
+            item:
+                homeStore.scope(
+                    state: \.searchState,
+                    action: \.searchAction
+                )
+        ) { searchStore in
+            NavigationStack {
+                SearchScreen(store: searchStore)
+            }
+            .presentationDetents([.height(120), .fraction(0.99)], selection: homeStore.searchDetent.sending(\.searchDetentUpdated))
+            .presentationDragIndicator(.visible)
+            .presentationBackgroundInteraction(.enabled)
+            .interactiveDismissDisabled()
+            .searchResultSheet(homeStore: homeStore)
+        }
+        
+        return sheet
+    }
 }
 

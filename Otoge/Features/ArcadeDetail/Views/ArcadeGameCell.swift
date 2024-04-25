@@ -21,8 +21,8 @@ struct ArcadeGameCell: View {
         }
         label: {
             HStack {
-                if let imageString = game.imageString {
-                    Image(uiImage: UIImage(named: imageString)!)
+                if let image = game.image {
+                    Image(asset: image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 32, height: 32)
