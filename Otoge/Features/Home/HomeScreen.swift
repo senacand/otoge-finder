@@ -13,6 +13,24 @@ struct HomeScreen: View {
     @Bindable var store: StoreOf<HomeFeature>
     
     var body: some View {
+        ZStack(alignment: .topLeading) {
+            mapView
+//            HStack(spacing: 12.0) {
+//                ProgressView()
+//                Text("Updating arcade list")
+//                Spacer()
+//            }
+//            .padding(.all)
+//            .frame(maxWidth: .infinity)
+//            .background(.thickMaterial)
+//            .clipShape(RoundedRectangle(cornerRadius: 16.0))
+//            .padding(.all)
+        }
+    }
+}
+
+private extension HomeScreen {
+    var mapView: some View {
         Map(
             position: $store
                 .mapCameraPosition
