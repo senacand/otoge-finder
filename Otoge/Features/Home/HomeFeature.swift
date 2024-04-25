@@ -82,16 +82,24 @@ struct HomeFeature {
     enum Action {
         case onAppear
         
+        // Global Actions
+        
         case arcadeListUpdated(arcades: [Arcade])
         case arcadeSelected(arcade: Arcade?)
         case mapCameraPositionChanged(MapCameraPosition)
         case mapCameraUpdated(MapCameraUpdateContext)
-        case searchDetentUpdated(PresentationDetent)
+        
+        // Location Manager
         
         case locationManagerAction(LocationManager.Action)
-        case arcadeDetailAction(PresentationAction<ArcadeDetailFeature.Action>)
+        
+        // Sheet Screens
+        
         case searchAction(PresentationAction<SearchFeature.Action>)
+        case searchDetentUpdated(PresentationDetent)
+        
         case searchResultAction(PresentationAction<SearchResultFeature.Action>)
+        case arcadeDetailAction(PresentationAction<ArcadeDetailFeature.Action>)
     }
     
     var body: some ReducerOf<Self> {
@@ -171,28 +179,6 @@ struct HomeFeature {
                 
             case .locationManagerAction:
                 break
-                
-            case .searchAction(.presented(.currentLocationTapped)):
-                return .run { [mapCenter = state.mapCenter] send in
-                    await send(
-                        .mapCameraPositionChanged(
-                            MapCameraPosition
-                                .userLocation(
-                                    fallback:
-                                        MapCameraPosition
-                                        .camera(
-                                            MapCamera(
-                                                centerCoordinate:
-                                                    CLLocationCoordinate2D(
-                                                        latitude: mapCenter.latitude,
-                                                        longitude: mapCenter.longitude
-                                                    ),
-                                                distance: 3000)
-                                        )
-                                )
-                        )
-                    )
-                }
                 
             case .searchAction(.presented(.searchCurrentAreaTapped)):
                 state.searchState?.isLoading = true

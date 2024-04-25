@@ -35,13 +35,12 @@ struct SearchFeature {
     enum Action {
         case onAppear
         case searchTextChanged(String)
-        case currentLocationTapped
-        case searchCurrentAreaTapped
         case textFieldFocusChanged(Bool)
         case searchCompleterResponse([MKLocalSearchCompletion])
         case searchCompletionTapped(MKLocalSearchCompletion)
         case clearTextFieldTapped
         
+        case searchCurrentAreaTapped
         case expandDetent
         case collapseDetent
         case goToMapItem(MKMapItem)
@@ -100,8 +99,7 @@ struct SearchFeature {
                     await send(.searchTextChanged(""))
                 }
                 
-            case .currentLocationTapped,
-                 .searchCurrentAreaTapped,
+            case .searchCurrentAreaTapped,
                  .expandDetent,
                  .collapseDetent,
                  .goToMapItem:
