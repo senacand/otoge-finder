@@ -15,7 +15,9 @@ struct SearchResultScreen: View {
         List {
             titleSection
                 .padding(.top, 8.0)
+                .listRowBackground(Color.clear)
             arcadeListSection
+                .listRowBackground(Color.clear)
         }
         .listStyle(.plain)
     }

@@ -26,10 +26,10 @@ targets:
       base:
         GENERATE_INFOPLIST_FILE: NO
         MARKETING_VERSION: 0.1.0
-        CURRENT_PROJECT_VERSION: 0.1.0.1
+        CURRENT_PROJECT_VERSION: 0.1.0.3
         PRODUCT_BUNDLE_IDENTIFIER: dev.sena.otoge
         APP_NAME: Otoge Finder
-        TARGETED_DEVICE_FAMILY: 1
+        TARGETED_DEVICE_FAMILY: 1,2
         ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
     preBuildScripts:
       - script: "${PROJECT_DIR}/swiftgen/bin/swiftgen config run"
