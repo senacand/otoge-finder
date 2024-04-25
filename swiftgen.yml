@@ -1,0 +1,9 @@
+input_dir: Otoge/
+output_dir: Otoge/Generated/
+
+xcassets:
+    inputs:
+        - Resources/Assets.xcassets
+    outputs:
+        - templateName: swift5
+          output: Assets+Generated.swift

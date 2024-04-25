@@ -30,3 +30,5 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: dev.sena.otoge
         APP_NAME: Otoge Finder
         TARGETED_DEVICE_FAMILY: 1
+    preBuildScripts:
+      - script: "${PROJECT_DIR}/swiftgen/bin/swiftgen config run"
