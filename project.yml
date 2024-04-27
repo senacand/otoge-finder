@@ -26,7 +26,7 @@ targets:
       base:
         GENERATE_INFOPLIST_FILE: NO
         MARKETING_VERSION: 0.1.0
-        CURRENT_PROJECT_VERSION: 0.1.0.3
+        CURRENT_PROJECT_VERSION: 0.1.0.4
         PRODUCT_BUNDLE_IDENTIFIER: dev.sena.otoge
         APP_NAME: Otoge Finder
         TARGETED_DEVICE_FAMILY: 1,2
