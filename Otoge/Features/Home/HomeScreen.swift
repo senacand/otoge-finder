@@ -44,66 +44,61 @@ private extension HomeScreen {
                 .onMapCameraChange(frequency: .onEnd) {
                     mapTapped = false
                 }
-                ZStack {
-                    if let store = $store.scope(
-                        state: \.arcadeDetailState,
-                        action: \.arcadeDetailAction
-                    ).wrappedValue
-                    {
-                        ArcadeDetailScreen(
-                            store: store
-                        )
-                        .transition(
-                            .move(edge: .bottom)
-                        )
-                    }
-                    
-                    else if let store = $store.scope(
-                        state: \.searchResultState,
-                        action: \.searchResultAction
-                    ).wrappedValue
-                    {
-                        SearchResultScreen(
-                            store: store
-                        )
-                        .transition(
-                            .move(edge: .bottom)
-                        )
-                    }
-                    
-                    else if let store = $store.scope(
-                        state: \.searchState,
-                        action: \.searchAction
-                    ).wrappedValue
-                    {
-                        VStack {
-                            Text("OTOGE")
-                                .font(Font.custom("Nabla", size: 48.0))
-                                .padding(.bottom, -18)
-                            SearchScreen(
+                DraggableContainer(width: 360, height: 460) {
+                    ZStack {
+                        if let store = $store.scope(
+                            state: \.arcadeDetailState,
+                            action: \.arcadeDetailAction
+                        ).wrappedValue
+                        {
+                            ArcadeDetailScreen(
                                 store: store
                             )
+                            .transition(
+                                .move(edge: .bottom)
+                            )
                         }
-                        .transition(
-                            .move(edge: .bottom)
-                        )
+                        
+                        else if let store = $store.scope(
+                            state: \.searchResultState,
+                            action: \.searchResultAction
+                        ).wrappedValue
+                        {
+                            SearchResultScreen(
+                                store: store
+                            )
+                            .transition(
+                                .move(edge: .bottom)
+                            )
+                        }
+                        
+                        else if let store = $store.scope(
+                            state: \.searchState,
+                            action: \.searchAction
+                        ).wrappedValue
+                        {
+                            VStack {
+                                Text("OTOGE")
+                                    .font(Font.custom("Nabla", size: 48.0))
+                                    .padding(.bottom, -18)
+                                SearchScreen(
+                                    store: store
+                                )
+                            }
+                            .transition(
+                                .move(edge: .bottom)
+                            )
+                        }
                     }
+                    .frame(maxWidth: .infinity)
+                    .animation(.smooth, value: store.searchResultState)
+                    .animation(.smooth, value: store.arcadeDetailState)
                 }
-                .padding(.all, 4.0)
-                .background(.thinMaterial)
-                .frame(
-                    width: 360,
-                    height: 460
-                )
-                .clipShape(RoundedRectangle(cornerRadius: 24.0))
-                .padding(.leading, 16.0)
                 .opacity(mapTapped ? 0.3 : 1.0)
                 .animation(
                     .smooth,
                     value: mapTapped
                 )
-                .animation(.smooth, value: store.searchResultState)
-                .animation(.smooth, value: store.arcadeDetailState)
             }
         }
     }
