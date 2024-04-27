@@ -1,9 +1,9 @@
 # Otoge Finder - Music Game Locator for iOS
-Easily find arcades with your favorite music game around you.
+Find arcades (game center) that has your favorite music game (otoge).
 
 <p align="center">
-  <img src="Assets/arcade-search.png" alt="Arcade Search Screen" width="300px" />
-  <img src="Assets/arcade-detail.png" alt="Arcade Detail Screen" width="300px" />
+  <img src="Assets/arcade-search.png" alt="Arcade Search Screen" height="400px" />
+  <img src="Assets/arcade-detail-ipad.png" alt="Arcade Detail Screen" height="600px" />
 </p>
 
 ## Development
