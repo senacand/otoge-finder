@@ -12,6 +12,18 @@ import MapKit
 // TODO: Would be nice if we can use the app Arcade model directly in the JSON file instead of using Otoge.app's model and converting it into the Arcade model. Need to create own fetch script.
 
 final class LocalArcadeRepository {
+    struct SearchLimit {
+        var maxDistance: CLLocationDistance
+        var minArcadeCount: Int
+    }
+    
+    private let searchLimits: [SearchLimit] = [
+        .init(maxDistance: 2000, minArcadeCount: 5),
+        .init(maxDistance: 3000, minArcadeCount: 3),
+        .init(maxDistance: 5000, minArcadeCount: 2),
+        .init(maxDistance: 30000, minArcadeCount: 1)
+    ]
+    
     private var arcades: [Arcade] = []
     
     private lazy var arcadeUpdated: AsyncStream<Void> = {
@@ -87,17 +99,49 @@ extension LocalArcadeRepository: ArcadeRepositoryProtocol {
         }
         
         let location = CLLocation(latitude: latitude, longitude: longitude)
+        let searchLimits = searchLimits.sorted { $0.maxDistance < $1.maxDistance }
+        let maxDistance = searchLimits.last?.maxDistance ?? 0
         
-        return await
-            getArcadesByPosition(
-                latitude: latitude,
-                longitude: longitude,
-                distanceMultiplier: 1
-            )
-            .sorted {
-                location.distance(from: $0.location.location)
-                    < location.distance(from: $1.location.location)
+        let initialResults =
+            arcades
+            .map {
+                ($0, location.distance(from: $0.location.location))
             }
+            .filter { $0.1 < maxDistance }
+            .sorted { $0.1 < $1.1 }
+        
+        var currentSearchLimitIndex = 0
+        var previousDistance: CLLocationDistance = 0
+        var arcades: [Arcade] = []
+        
+        // Logic:
+        // 1. Search all arcades <1000m of location.
+        // 2. If at least searchLimit's minArcadeCount amount of arcades is found, return.
+        // 3. Else, increase the radius by 1000m and search all arcades within that area.
+        // 4. Repeat (2)
+        
+        for result in initialResults {
+            let (arcade, distance) = result
+            
+            while let currentSearchLimit = searchLimits[safe: currentSearchLimitIndex],
+                  distance > currentSearchLimit.maxDistance {
+                currentSearchLimitIndex += 1
+            }
+            
+            guard let currentSearchLimit = searchLimits[safe: currentSearchLimitIndex] else {
+                break
+            }
+            
+            guard Int(distance / 1000) <= Int(previousDistance / 1000)
+                    || arcades.count < currentSearchLimit.minArcadeCount else {
+                break
+            }
+            
+            previousDistance = distance
+            arcades.append(arcade)
+        }
+        
+        return arcades
     }
     
     private func getArcadesByPosition(
@@ -137,5 +181,12 @@ private extension Location {
             latitude: latitude,
             longitude: longitude
         )
+    }
+}
+
+extension Collection {
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }
