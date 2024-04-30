@@ -122,6 +122,17 @@ struct SearchScreen: View {
                 }
                 .padding(.leading, 4.0)
             }
+            else {
+                Button {
+                    store.send(.settingsTapped)
+                } label: {
+                    Image(systemName: "gear")
+                        .padding(.vertical, 2)
+                        .padding(.leading, 4.0)
+                }
+                .foregroundStyle(.gray)
+                .buttonStyle(.plain)
+            }
         }
         .animation(.snappy, value: store.isCancelButtonShown)
         .onChange(of: store.isTextFieldFocused) { _, isFocused in

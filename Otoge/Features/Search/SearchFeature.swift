@@ -44,6 +44,7 @@ struct SearchFeature {
         case expandDetent
         case collapseDetent
         case goToMapItem(MKMapItem)
+        case settingsTapped
     }
     
     var body: some ReducerOf<Self> {
@@ -102,7 +103,8 @@ struct SearchFeature {
             case .searchCurrentAreaTapped,
                  .expandDetent,
                  .collapseDetent,
-                 .goToMapItem:
+                 .goToMapItem,
+                 .settingsTapped:
                 break
             }
             
